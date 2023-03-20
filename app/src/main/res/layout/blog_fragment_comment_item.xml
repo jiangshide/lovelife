@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:paddingTop="5dp"
+  android:paddingBottom="5dp"
+  >
+  <com.android.widget.ZdImageView
+    android:id="@+id/commentChildIcon"
+    android:layout_width="35dp"
+    android:layout_height="35dp"
+    android:scaleType="centerCrop"
+    android:background="@mipmap/default_user" />
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginLeft="@dimen/content"
+    android:layout_marginRight="@dimen/content"
+    >
+    <com.android.widget.ZdTextView
+      android:id="@+id/commentChildName"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="jankey"
+      android:textStyle="bold"
+      app:is_light="true"
+      android:textSize="@dimen/small" />
+
+    <com.android.widget.ZdTextView
+      android:id="@+id/commentChildDes"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="dess"
+      app:text_color="@color/black"
+      android:textSize="@dimen/normal"
+      app:close="折叠"
+      app:more="展开"
+      />
+    <com.android.widget.ZdTextView
+      android:id="@+id/commentChildDate"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/commentItemContent"
+      app:is_light="true"
+      android:text="date"
+      android:layout_toRightOf="@+id/commentItemIcon"
+      android:textSize="@dimen/small" />
+  </LinearLayout>
+
+</LinearLayout>

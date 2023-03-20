@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:id="@+id/blogItemUser"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:padding="@dimen/content">
+
+  <com.android.widget.ZdImageView
+    android:id="@+id/blogItemHeadIcon"
+    android:layout_width="@dimen/head"
+    android:layout_height="@dimen/head"
+    android:layout_marginRight="@dimen/content"
+    android:scaleType="centerCrop"
+    android:src="@mipmap/default_user"
+    />
+
+  <TextView
+    android:id="@+id/blogItemHeadName"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_toRightOf="@+id/blogItemHeadIcon"
+    android:text="jankey"
+    android:textSize="@dimen/big"
+    android:textColor="@color/font"
+    android:textStyle="bold" />
+
+  <TextView
+    android:id="@+id/blogItemHeadDes"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/blogItemHeadName"
+    android:layout_marginTop="6dp"
+    android:layout_toRightOf="@+id/blogItemHeadIcon"
+    android:drawableLeft="@mipmap/sex_man"
+    android:text=".19.北京"
+    android:textColor="@color/font"
+    android:textSize="@dimen/normal" />
+
+  <LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentRight="true"
+    android:layout_centerVertical="true"
+    android:gravity="center"
+    >
+
+    <TextView
+      android:id="@+id/blogItemHeadTime"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="刚刚"
+      android:textColor="@color/font"
+      android:textSize="@dimen/small" />
+
+    <com.android.widget.ZdImageView
+      android:id="@+id/blogItemHeadMore"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:scaleType="centerCrop"
+      app:srcCompat="@mipmap/more" />
+  </LinearLayout>
+</RelativeLayout>

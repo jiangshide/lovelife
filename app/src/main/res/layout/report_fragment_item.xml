@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.android.widget.ZdButton xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:layout_width="wrap_content"
+  android:layout_height="wrap_content"
+  android:layout_margin="@dimen/content"
+  android:id="@+id/reportItemName"
+  android:textColor="@color/txtGray"
+  android:textSize="@dimen/normal"
+  android:textStyle="bold"
+  app:normal_color="@color/grayLight"
+  android:paddingLeft="@dimen/content"
+  android:paddingRight="@dimen/content"
+  android:paddingTop="6dp"
+  android:gravity="center"
+  android:paddingBottom="6dp"
+  app:corner="2dp"
+  />

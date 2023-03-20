@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:padding="1dp">
+
+  <com.android.widget.ZdImageView
+    android:id="@+id/albumItemImg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scaleType="centerCrop"
+    android:src="@mipmap/ic_launcher" />
+
+  <com.android.widget.ZdImageView
+    android:id="@+id/albumItemFormat"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentRight="true"
+    android:layout_margin="5dp"
+    android:src="@mipmap/img" />
+
+  <TextView
+    android:id="@+id/albumItemDate"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:textColor="@color/font"
+    android:textSize="@dimen/small" />
+
+  <TextView
+    android:id="@+id/albumItemSize"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/albumItemFormat"
+    android:layout_alignParentRight="true"
+    android:layout_marginRight="5dp"
+    android:textSize="@dimen/small"
+    android:textColor="@color/font"
+    android:textStyle="bold" />
+
+  <LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:orientation="vertical"
+    android:padding="5dp">
+
+    <com.android.widget.ZdButton
+        android:id="@+id/albumItemChannel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLength="20"
+        android:maxLines="1"
+        android:paddingLeft="10dp"
+        android:paddingTop="3dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="3dp"
+        android:visibility="visible"
+        android:textColor="@color/font"
+        android:textSize="@dimen/small"
+        android:textStyle="bold"
+        app:corner="5dp"
+        app:normal_color="@color/blue" />
+
+    <LinearLayout
+      android:id="@+id/albumItemChannelL"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="5dp">
+
+      <TextView
+        android:id="@+id/albumItemLike"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/like"
+        android:drawablePadding="4dp"
+        android:drawableTint="@color/font"
+        android:gravity="center"
+        android:text="0"
+        android:textColor="@color/font"
+        android:textSize="@dimen/small"
+        android:textStyle="bold" />
+
+      <TextView
+        android:id="@+id/albumItemView"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/content"
+        android:drawableLeft="@mipmap/ic_blog_view_count"
+        android:drawablePadding="5dp"
+        android:drawableTint="@color/font"
+        android:gravity="center"
+        android:text="0"
+        android:textColor="@color/font"
+        android:textSize="@dimen/small"
+        android:textStyle="bold"
+        android:visibility="visible" />
+
+      <TextView
+        android:id="@+id/albumItemComment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/content"
+        android:drawableLeft="@mipmap/tab_icon_chat_def"
+        android:drawablePadding="4dp"
+        android:drawableTint="@color/font"
+        android:gravity="center"
+        android:text="0"
+        android:textColor="@color/font"
+        android:textSize="@dimen/small"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+      <TextView
+        android:id="@+id/albumItemShare"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/content"
+        android:drawableLeft="@mipmap/login_wechat"
+        android:drawablePadding="4dp"
+        android:textColor="@color/font"
+        android:gravity="center"
+        android:text="0"
+        android:textSize="@dimen/small"
+        android:textStyle="bold"
+        android:visibility="gone" />
+    </LinearLayout>
+  </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,568 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+<!--    <array name="global_net_err">-->
+<!--        <item>30001</item>-->
+<!--        <item>60001</item>-->
+<!--        <item>800000</item>-->
+<!--        <item>800001</item>-->
+<!--    </array>-->
+
+    <declare-styleable name="waveStyle">
+        <attr name="columnHeight" format="dimension|reference"/>
+        <attr name="columnMinHeight" format="dimension|reference"/>
+        <attr name="columnWidth" format="dimension|reference"/>
+        <attr name="columnGap" format="dimension|reference"/>
+        <attr name="upColor" format="color|reference"/>
+        <attr name="upMaskColor" format="color|reference"/>
+        <attr name="downColor" format="color|reference"/>
+        <attr name="downMaskColor" format="color|reference"/>
+    </declare-styleable>
+    
+<!--    <declare-styleable name="BannerLayoutStyle">-->
+<!--        <attr name="selectedIndicatorColor" format="color|reference" />-->
+<!--        <attr name="unSelectedIndicatorColor" format="color|reference" />-->
+<!--        <attr name="indicatorShape" format="enum">-->
+<!--            <enum name="rect" value="0" />-->
+<!--            <enum name="oval" value="1" />-->
+<!--        </attr>-->
+
+<!--        <attr name="selectedIndicatorHeight" format="dimension|reference" />-->
+<!--        <attr name="selectedIndicatorWidth" format="dimension|reference" />-->
+
+<!--        <attr name="unSelectedIndicatorHeight" format="dimension|reference" />-->
+<!--        <attr name="unSelectedIndicatorWidth" format="dimension|reference" />-->
+
+<!--        <attr name="indicatorPosition" format="enum">-->
+<!--            <enum name="centerBottom" value="0" />-->
+<!--            <enum name="rightBottom" value="1" />-->
+<!--            <enum name="leftBottom" value="2" />-->
+<!--            <enum name="centerTop" value="3" />-->
+<!--            <enum name="rightTop" value="4" />-->
+<!--            <enum name="leftTop" value="5" />-->
+<!--        </attr>-->
+
+<!--        <attr name="indicatorSpace" format="dimension|reference" />-->
+<!--        <attr name="indicatorMargin" format="dimension|reference" />-->
+<!--        <attr name="autoPlayDuration" format="integer|reference" />-->
+<!--        <attr name="scrollDuration" format="integer|reference" />-->
+<!--        <attr name="isAutoPlay" format="boolean|reference" />-->
+<!--    </declare-styleable>-->
+
+    <declare-styleable name="ZdTopView">
+        <attr name="bgColor" format="color|reference" />
+        <attr name="leftName" format="string" />
+        <attr name="leftTextColor" format="color" />
+        <attr name="leftTextSize" format="integer" />
+        <attr name="leftBg" format="reference|color" />
+        <attr name="leftBgDraw" format="reference" />
+        <attr name="titleName" format="string" />
+        <attr name="titleTextColor" format="color" />
+        <attr name="titleTextSize" format="integer" />
+        <attr name="titleSmallName" format="string"/>
+        <attr name="titleSmallTextColor" format="color"/>
+        <attr name="titleSmallTextSize" format="integer"/>
+        <attr name="rightName" format="string" />
+        <attr name="rightTextColor" format="color" />
+        <attr name="rightTextSize" format="integer" />
+        <attr name="rightBg" format="reference|color" />
+    </declare-styleable>
+
+    <declare-styleable name="CusEditText">
+        <attr name="format" format="integer" />
+        <attr name="formatStart" format="integer" />
+        <attr name="formatEnd" format="integer" />
+        <attr name="isDelete" format="boolean" />
+        <attr name="corners" format="dimension" />
+        <attr name="normal_colors" format="reference|color" />
+        <attr name="strokes" format="dimension" />
+        <attr name="stroke_colors" format="reference|color" />
+    </declare-styleable>
+
+<!--    <declare-styleable name="GestureUnlockView">-->
+<!--        <attr name="color_normal" format="color" />-->
+<!--        <attr name="color_selected" format="color" />-->
+<!--        <attr name="color_error" format="color" />-->
+<!--        <attr name="point_radius" format="dimension" />-->
+<!--        <attr name="stroke_width" format="dimension" />-->
+<!--        <attr name="line_width" format="dimension" />-->
+<!--        <attr name="radius_factor" format="float" />-->
+<!--    </declare-styleable>-->
+
+    <declare-styleable name="ButtonStyle">
+        <attr name="corner" format="dimension" />
+        <attr name="leftCorner" format="dimension" />
+        <attr name="topCorner" format="dimension" />
+        <attr name="rightCorner" format="dimension" />
+        <attr name="bottomCorner" format="dimension" />
+        <attr name="press_color" format="reference|color" />
+        <attr name="normal_color" format="reference|color" />
+        <attr name="txt_color" format="reference|color" />
+        <attr name="stroke" format="dimension" />
+        <attr name="stroke_color" format="reference|color" />
+        <attr name="type">
+            <enum name="ok" value="1" />
+            <enum name="info" value="2" />
+            <enum name="warning" value="3" />
+            <enum name="error" value="4" />
+        </attr>
+        <attr name="position">
+            <enum name="center" value="0"/>
+            <enum name="left" value="1"/>
+            <enum name="top" value="2"/>
+            <enum name="right" value="3"/>
+            <enum name="bottom" value="4"/>
+        </attr>
+        <attr name="drawableTint" format="color"/>
+        <attr name="drawableSize" format="dimension"/>
+        <attr name="android:drawablePadding"/>
+    </declare-styleable>
+
+<!--    <declare-styleable name="CustomProgressBar">-->
+<!--        <attr name="outside_color" format="color" />-->
+<!--        <attr name="outside_radius" format="dimension" />-->
+<!--        <attr name="inside_color" format="color" />-->
+<!--        <attr name="progress_text_color" format="color" />-->
+<!--        <attr name="progress_text_size" format="dimension" />-->
+<!--        <attr name="progress_width" format="dimension" />-->
+<!--        <attr name="max_progress" format="integer" />-->
+<!--        <attr name="progress" format="float" />-->
+<!--        <attr name="direction">-->
+<!--            <enum name="left" value="0" />-->
+<!--            <enum name="top" value="1" />-->
+<!--            <enum name="right" value="2" />-->
+<!--            <enum name="bottom" value="3" />-->
+<!--        </attr>-->
+<!--    </declare-styleable>-->
+
+    <!-- 定义自定义属性 -->
+<!--    <attr name="line_color" format="color" />-->
+<!--    <attr name="line_height" format="dimension" />-->
+    <!-- 声明自定义属性 -->
+<!--    <declare-styleable name="edit_bg">-->
+<!--        <attr name="line_color" />-->
+<!--        <attr name="line_height" />-->
+<!--    </declare-styleable>-->
+<!--    <declare-styleable name="TagFlowLayout">-->
+<!--        <attr name="auto_select_effect" format="boolean" />-->
+<!--        <attr name="max_select" format="integer" />-->
+<!--        <attr name="gravity">-->
+<!--            <enum name="left" value="-1" />-->
+<!--            <enum name="center" value="0" />-->
+<!--            <enum name="right" value="1" />-->
+<!--        </attr>-->
+<!--    </declare-styleable>-->
+<!--    <declare-styleable name="ViewPagerIndicator">-->
+<!--        <attr name="columnSun" format="integer"></attr>-->
+<!--        <attr name="indicatorColor" format="color"></attr>-->
+<!--        <attr name="tabCheckColor" format="color"></attr>-->
+<!--        <attr name="tabUnCheckColor" format="color"></attr>-->
+<!--    </declare-styleable>-->
+
+    <declare-styleable name="zdWheel">
+        <attr name="textSize" format="integer" />
+        <attr name="lineSpace" format="float" />
+        <attr name="centerTextColor" format="integer" />
+        <attr name="outerTextColor" format="integer" />
+        <attr name="dividerTextColor" format="integer" />
+        <attr name="itemsVisibleCount" format="integer" />
+        <attr name="isLoop" format="boolean" />
+        <attr name="initialPosition" format="integer" />
+        <attr name="scaleX" format="float" />
+    </declare-styleable>
+
+    <declare-styleable name="SwitchButton">
+        <attr name="shadowRadius" format="reference|dimension" />
+        <attr name="shadowOffset" format="reference|dimension" />
+        <attr name="shadowColor" format="reference|color" />
+        <attr name="uncheckColor" format="reference|color" />
+        <attr name="checkedColor" format="reference|color" />
+
+        <attr name="bordersWidth" format="reference|dimension" />
+        <attr name="checklineColor" format="reference|color" />
+        <attr name="checklineWidth" format="reference|dimension" />
+        <attr name="uncheckcircleColor" format="reference|color" />
+        <attr name="uncheckcircleWidth" format="reference|dimension" />
+        <attr name="uncheckcircleRadius" format="reference|dimension" />
+
+        <attr name="checked" format="reference|boolean" />
+        <attr name="shadowEffect" format="reference|boolean" />
+        <attr name="effectDuration" format="reference|integer" />
+        <attr name="buttonColor" format="reference|color" />
+        <attr name="showIndicator" format="reference|boolean" />
+        <attr name="backGround" format="reference|color" />
+        <attr name="enableEffect" format="reference|boolean" />
+    </declare-styleable>
+
+    <!-- the qrcode start -->
+<!--    <declare-styleable name="QRCodeView">-->
+<!--        &lt;!&ndash; 扫描框距离toolbar底部的距离，默认值为90dp &ndash;&gt;-->
+<!--        <attr name="qrcv_topOffset" format="dimension|reference" />-->
+<!--        &lt;!&ndash; 扫描框边角线的宽度，默认值为3dp &ndash;&gt;-->
+<!--        <attr name="qrcv_cornerSize" format="dimension|reference" />-->
+<!--        &lt;!&ndash; 扫描框边角线的长度，默认值为20dp &ndash;&gt;-->
+<!--        <attr name="qrcv_cornerLength" format="dimension|reference" />-->
+<!--        &lt;!&ndash; 扫描框边角线的颜色，默认值为@android:color/white &ndash;&gt;-->
+<!--        <attr name="qrcv_cornerColor" format="color|reference" />-->
+<!--        &lt;!&ndash; 扫描框的宽度，默认值为200dp &ndash;&gt;-->
+<!--        <attr name="qrcv_rectWidth" format="dimension|reference" />-->
+<!--        &lt;!&ndash; 条码扫样式描框的高度，默认值为140dp &ndash;&gt;-->
+<!--        <attr name="qrcv_barcodeRectHeight" format="dimension|reference" />-->
+<!--        &lt;!&ndash; 除去扫描框，其余部分阴影颜色，默认值为#33FFFFFF &ndash;&gt;-->
+<!--        <attr name="qrcv_maskColor" format="color|reference" />-->
+<!--        &lt;!&ndash; 扫描线的宽度，默认值为1dp &ndash;&gt;-->
+<!--        <attr name="qrcv_scanLineSize" format="dimension|reference" />-->
+<!--        &lt;!&ndash; 扫描线的颜色，默认值为@android:color/white &ndash;&gt;-->
+<!--        <attr name="qrcv_scanLineColor" format="color|reference" />-->
+<!--        &lt;!&ndash; 扫描线距离上下或者左右边框的间距，默认值为0dp &ndash;&gt;-->
+<!--        <attr name="qrcv_scanLineMargin" format="dimension|reference" />-->
+<!--        &lt;!&ndash; 是否显示默认的图片扫描线，默认值为false &ndash;&gt;-->
+<!--        <attr name="qrcv_isShowDefaultScanLineDrawable" format="boolean" />-->
+<!--        &lt;!&ndash; 扫描线的图片资源，默认值为null &ndash;&gt;-->
+<!--        <attr name="qrcv_customScanLineDrawable" format="reference" />-->
+<!--        &lt;!&ndash; 扫描边框的宽度，默认值为1dp &ndash;&gt;-->
+<!--        <attr name="qrcv_borderSize" format="dimension|reference" />-->
+<!--        &lt;!&ndash; 扫描边框的颜色，默认值为@android:color/white &ndash;&gt;-->
+<!--        <attr name="qrcv_borderColor" format="color|reference" />-->
+<!--        &lt;!&ndash; 扫描线从顶部移动到底部的动画时间，默认值为1000 &ndash;&gt;-->
+<!--        <attr name="qrcv_animTime" format="integer" />-->
+<!--        &lt;!&ndash; 扫描框是否垂直居中，该属性为true时会忽略qrcv_topOffset属性，默认值为false &ndash;&gt;-->
+<!--        <attr name="qrcv_isCenterVertical" format="boolean" />-->
+<!--        &lt;!&ndash; Toolbar的高度，当有设置qrcv_isCenterVertical属性时，通过该属性来修正有Toolbar时导致扫描框垂直居中的偏差，默认值为0dp &ndash;&gt;-->
+<!--        <attr name="qrcv_toolbarHeight" format="dimension|reference" />-->
+<!--        &lt;!&ndash; 是否是扫条形码，默认值为false &ndash;&gt;-->
+<!--        <attr name="qrcv_isBarcode" format="boolean" />-->
+<!--        &lt;!&ndash; 扫描二维码时的提示文案，默认值为null &ndash;&gt;-->
+<!--        <attr name="qrcv_qrCodeTipText" format="string|reference" />-->
+<!--        &lt;!&ndash; 扫描条码时的提示文案，默认值为null &ndash;&gt;-->
+<!--        <attr name="qrcv_barCodeTipText" format="string|reference" />-->
+<!--        &lt;!&ndash; 提示文案字体大小，默认值为14sp &ndash;&gt;-->
+<!--        <attr name="qrcv_tipTextSize" format="dimension|reference" />-->
+<!--        &lt;!&ndash; 提示文案颜色，默认值为@android:color/white &ndash;&gt;-->
+<!--        <attr name="qrcv_tipTextColor" format="color|reference" />-->
+<!--        &lt;!&ndash; 提示文案是否在扫描框的底部，默认值为false &ndash;&gt;-->
+<!--        <attr name="qrcv_isTipTextBelowRect" format="boolean" />-->
+<!--        &lt;!&ndash; 提示文案与扫描框之间的间距，默认值为20dp &ndash;&gt;-->
+<!--        <attr name="qrcv_tipTextMargin" format="dimension|reference" />-->
+<!--        &lt;!&ndash; 是否把提示文案作为单行显示，默认值为false &ndash;&gt;-->
+<!--        <attr name="qrcv_isShowTipTextAsSingleLine" format="boolean" />-->
+<!--        &lt;!&ndash; 是否显示提示文案的背景，默认值为false &ndash;&gt;-->
+<!--        <attr name="qrcv_isShowTipBackground" format="boolean" />-->
+<!--        &lt;!&ndash; 提示文案的背景色，默认值为#22000000 &ndash;&gt;-->
+<!--        <attr name="qrcv_tipBackgroundColor" format="color|reference" />-->
+<!--        &lt;!&ndash; 扫描线是否来回移动，默认值为true &ndash;&gt;-->
+<!--        <attr name="qrcv_isScanLineReverse" format="boolean" />-->
+<!--        &lt;!&ndash; 是否显示默认的网格图片扫描线，默认值为false &ndash;&gt;-->
+<!--        <attr name="qrcv_isShowDefaultGridScanLineDrawable" format="boolean" />-->
+<!--        &lt;!&ndash; 扫描线的网格图片资源，默认值为null &ndash;&gt;-->
+<!--        <attr name="qrcv_customGridScanLineDrawable" format="reference" />-->
+<!--        &lt;!&ndash; 是否只识别扫描框区域的二维码，默认值为false &ndash;&gt;-->
+<!--        <attr name="qrcv_isOnlyDecodeScanBoxArea" format="boolean" />-->
+<!--    </declare-styleable>-->
+    <!-- the qrcode end -->
+
+<!--    <declare-styleable name="CusCoordinatorLayout">-->
+<!--        <attr name="contentScrim" format="color" />-->
+<!--        <attr name="tabIndicatorColor" format="color" />-->
+<!--        <attr name="tabTextColor" format="color" />-->
+<!--    </declare-styleable>-->
+
+<!--    <declare-styleable name="HorizontalListView">-->
+<!--        <attr name="dividerWidth" format="dimension" />-->
+<!--        <attr name="android:divider" />-->
+<!--        <attr name="android:requiresFadingEdge" />-->
+<!--        <attr name="android:fadingEdgeLength" />-->
+<!--    </declare-styleable>-->
+
+    <declare-styleable name="ZdCircleImageView">
+        <attr name="civ_border_width" format="dimension" />
+        <attr name="civ_border_color" format="color" />
+        <attr name="civ_border_overlay" format="boolean" />
+        <attr name="civ_circle_background_color" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="Custom_Round_Image_View">
+        <attr name="radius" format="dimension" />
+        <attr name="left_top_radius" format="dimension" />
+        <attr name="right_top_radius" format="dimension" />
+        <attr name="right_bottom_radius" format="dimension" />
+        <attr name="left_bottom_radius" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="CusTextView">
+        <attr name="more" format="string" />
+        <attr name="close" format="string" />
+        <attr name="maxSize" format="integer" />
+        <attr name="is_light" format="boolean" />
+        <attr name="tips_color" format="color|reference" />
+        <attr name="text_color" format="color|reference" />
+    </declare-styleable>
+
+<!--    <declare-styleable name="CusTabLayout1">-->
+<!--        <attr name="cusTabIndicatorColor" format="color" />-->
+<!--        <attr name="tabIndicatorHeight" format="dimension" />-->
+<!--        <attr name="tabContentStart" format="dimension" />-->
+<!--        <attr name="tabBackground" format="reference" />-->
+<!--        <attr name="tabModeJS">-->
+<!--            <enum name="scrollable" value="0" />-->
+<!--            <enum name="fixed" value="1" />-->
+<!--        </attr>-->
+<!--        <attr name="tabGravityJS">-->
+<!--            <enum name="fill" value="0" />-->
+<!--            <enum name="center" value="1" />-->
+<!--        </attr>-->
+<!--        <attr name="tabMinWidth" format="dimension" />-->
+<!--        <attr name="tabMaxWidth" format="dimension" />-->
+<!--        <attr name="tabTextAppearance" format="reference" />-->
+<!--        <attr name="cusTabTextColor" format="color" />-->
+<!--        <attr name="tabSelectedTextColor" format="color" />-->
+<!--        <attr name="tabPaddingStart" format="dimension" />-->
+<!--        <attr name="tabPaddingTop" format="dimension" />-->
+<!--        <attr name="tabPaddingEnd" format="dimension" />-->
+<!--        <attr name="tabPaddingBottom" format="dimension" />-->
+<!--        <attr name="tabPadding" format="dimension" />-->
+<!--    </declare-styleable>-->
+
+    <declare-styleable name="ZdLoading">
+        <attr name="ball_color" format="color" />
+        <attr name="zdline_color" format="color" />
+        <attr name="line_with" format="dimension" />
+        <attr name="stroke_with" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="DragView">
+        <attr name="umanoPanelHeight" format="dimension" />
+        <attr name="umanoShadowHeight" format="dimension" />
+        <attr name="umanoParallaxOffset" format="dimension" />
+        <attr name="umanoFadeColor" format="color" />
+        <attr name="umanoFlingVelocity" format="integer" />
+        <attr name="umanoDragView" format="reference" />
+        <attr name="umanoScrollableView" format="reference" />
+        <attr name="umanoOverlay" format="boolean"/>
+        <attr name="umanoClipPanel" format="boolean"/>
+        <attr name="umanoAnchorPoint" format="float" />
+        <attr name="umanoInitialState" format="enum">
+            <enum name="expanded" value="0" />
+            <enum name="collapsed" value="1" />
+            <enum name="anchored" value="2" />
+            <enum name="hidden" value="3" />
+        </attr>
+        <attr name="umanoScrollInterpolator" format="reference" />
+    </declare-styleable>
+
+<!--    <declare-styleable name="BubbleTabBar">-->
+<!--        <attr name="bubbletab_menuResource" format="reference"/>-->
+<!--        <attr name="bubbletab_disabled_icon_color" format="color" />-->
+<!--        <attr name="bubbletab_custon_font" format="string" />-->
+<!--        <attr name="bubbletab_horizontal_padding" format="dimension" />-->
+<!--        <attr name="bubbletab_vertical_padding" format="dimension" />-->
+<!--        <attr name="bubbletab_icon_size" format="dimension" />-->
+<!--        <attr name="bubbletab_title_size" format="dimension" />-->
+<!--    </declare-styleable>-->
+
+<!--    <declare-styleable name="Bubble">-->
+<!--        <attr name="android:id"/>-->
+<!--        <attr name="android:title"/>-->
+<!--        <attr name="android:icon"/>-->
+<!--        <attr name="android:enabled"/>-->
+<!--        <attr name="android:checked"/>-->
+<!--        <attr name="android:iconTint" format="color"/>-->
+<!--    </declare-styleable>-->
+
+    <declare-styleable name="ZdSideBar">
+        <attr name="sidebar_lazy_respond" format="boolean"/>
+        <attr name="sidebar_text_size" format="dimension"/>
+        <attr name="sidebar_text_color" format="color"/>
+        <attr name="sidebar_max_offset" format="dimension"/>
+        <attr name="sidebar_position" format="enum">
+            <enum name="right" value="0"/>
+            <enum name="left" value="1"/>
+        </attr>
+        <attr name="sidebar_text_alignment" format="enum">
+            <enum name="center" value="0"/>
+            <enum name="left" value="1"/>
+            <enum name="right" value="2" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="SectorMenuButton">
+        <attr name="aebMainButtonSizeDp" format="dimension|reference" />
+        <attr name="aebSubButtonSizeDp" format="dimension|reference" />
+        <attr name="aebButtonGapDp" format="dimension|reference" />
+        <attr name="aebStartAngleDegree" format="integer|reference" />
+        <attr name="aebEndAngleDegree" format="integer|reference" />
+        <attr name="aebAnimDurationMillis" format="integer|reference" />
+        <attr name="aebButtonElevation" format="dimension|reference" />
+        <attr name="aebMaskBackgroundColor" format="color|reference" />
+        <attr name="aebIsSelectionMode" format="boolean" />
+        <attr name="aebMainButtonTextColor" format="color|reference" />
+        <attr name="aebSubButtonTextColor" format="color|reference" />
+        <attr name="aebMainButtonTextSizeSp" format="dimension|reference" />
+        <attr name="aebSubButtonTextSizeSp" format="dimension|reference" />
+        <attr name="aebRippleEffect" format="boolean" />
+        <attr name="aebRippleColor" format="color|reference"/>
+        <attr name="aebMainButtonRotateDegree" format="integer|reference"/>
+        <attr name="aebMainButtonRotateAnimDurationMillis" format="integer|reference"/>
+        <attr name="aebBlurBackground" format="boolean" />
+        <attr name="aebBlurRadius" format="float|reference"/>
+    </declare-styleable>
+
+    <declare-styleable name="EmojiconMenu">
+        <attr name="bigEmojiconRows" format="integer" />
+        <attr name="emojiconColumns" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="VideoView">
+        <attr name="looping" format="boolean"/>
+        <attr name="enableAudioFocus" format="boolean"/>
+        <attr name="enableMediaCodec" format="boolean"/>
+        <attr name="usingSurfaceView" format="boolean"/>
+        <attr name="enableParallelPlay" format="boolean"/>
+
+        <attr name="screenScaleType" format="dimension">
+            <enum name="type_default" value="0"/>
+            <enum name="type_16_9" value="1"/>
+            <enum name="type_4_3" value="2"/>
+            <enum name="type_match_parent" value="3"/>
+            <enum name="type_original" value="4"/>
+            <enum name="type_center_crop" value="5"/>
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="RangeSeekBar">
+        <!--RangeSeekBar common attrs-->
+
+        <!--The maximum-->
+        <attr name="rsb_max" format="float"/>
+
+        <!--The minimum-->
+        <attr name="rsb_min" format="float"/>
+
+        <!--RangeSeekBar mode, single is normal seekBar, range is RangeSeekBar-->
+        <attr name="rsb_mode" format="enum">
+            <enum name="single" value="1"/>
+            <enum name="range" value="2"/>
+        </attr>
+
+        <!--RangeSeekBar gravity-->
+        <attr name="rsb_gravity" format="enum">
+            <enum name="top" value="0"/>
+            <enum name="bottom" value="1"/>
+            <enum name="center" value="2"/>
+        </attr>
+
+        <!--The min interval of the thumbs -->
+        <attr name="rsb_min_interval" format="float"/>
+
+        <!-- 0 for the normal mode, greater than 1 to switch to scale mode-->
+        <attr name="rsb_tick_mark_number" format="integer"/>
+
+        <!--Scale mode
+        Number according to the scale of the actual proportion of the distribution of the location (markTextArray must be a number)
+        Other bisects the current layout (markTextArray can be any character)
+        -->
+        <attr name="rsb_tick_mark_mode" format="enum">
+            <enum name="number" value="0"/>
+            <enum name="other" value="1"/>
+        </attr>
+
+        <!--The tick mark text gravity -->
+        <attr name="rsb_tick_mark_gravity" format="enum">
+            <enum name="left" value="0"/>
+            <enum name="center" value="1"/>
+            <enum name="right" value="2"/>
+        </attr>
+
+        <!--The tick mark text layout gravity -->
+        <attr name="rsb_tick_mark_layout_gravity" format="enum">
+            <enum name="top" value="0"/>
+            <enum name="bottom" value="1"/>
+        </attr>
+
+        <!--The tick mark text array -->
+        <attr name="rsb_tick_mark_text_array" format="reference"/>
+
+        <!--The tick mark text margin bottom to progress -->
+        <attr name="rsb_tick_mark_text_margin" format="dimension" />
+
+        <attr name="rsb_tick_mark_text_size" format="dimension" />
+
+        <attr name="rsb_tick_mark_text_color" format="color" />
+
+        <!--it just work in range && number mode now-->
+        <attr name="rsb_tick_mark_in_range_text_color" format="color" />
+
+        <attr name="rsb_progress_height" format="dimension"/>
+
+        <attr name="rsb_progress_radius" format="dimension"/>
+
+        <!--the color of progress bar when in progress-->
+        <attr name="rsb_progress_color" format="color"/>
+        <!--the default color of the progress bar-->
+        <attr name="rsb_progress_default_color" format="color"/>
+
+        <attr name="rsb_progress_drawable" format="reference"/>
+
+        <attr name="rsb_progress_drawable_default" format="reference"/>
+
+        <!--SeekBar attrs-->
+        <attr name="rsb_indicator_show_mode" format="enum">
+            <enum name="showWhenTouch" value="0"/>
+            <enum name="alwaysHide" value="1"/>
+            <enum name="alwaysShowAfterTouch" value="2"/>
+            <enum name="alwaysShow" value="3"/>
+        </attr>
+        <attr name="rsb_indicator_height" format="dimension" >
+            <enum name="wrap_content" value="-1" />
+        </attr>
+        <attr name="rsb_indicator_width" format="dimension" >
+            <enum name="wrap_content" value="-1" />
+        </attr>
+        <!--indicator margin bottom to progress bar-->
+        <attr name="rsb_indicator_margin" format="dimension" />
+        <attr name="rsb_indicator_text_size" format="dimension" />
+        <attr name="rsb_indicator_text_color" format="color" />
+        <!--indicator arrow size, it just work when you not use rsb_indicator_drawable -->
+        <attr name="rsb_indicator_arrow_size" format="dimension" />
+        <!-- must use 9 path ！！！-->
+        <attr name="rsb_indicator_drawable" format="reference"/>
+        <attr name="rsb_indicator_background_color" format="color" />
+        <attr name="rsb_indicator_padding_left" format="dimension" />
+        <attr name="rsb_indicator_padding_right" format="dimension" />
+        <attr name="rsb_indicator_padding_top" format="dimension" />
+        <attr name="rsb_indicator_padding_bottom" format="dimension" />
+        <attr name="rsb_indicator_radius" format="dimension" />
+        <attr name="rsb_thumb_drawable" format="reference"/>
+        <!--the thumb inactivated is when you don't touch the thumb button-->
+        <attr name="rsb_thumb_inactivated_drawable" format="reference"/>
+        <attr name="rsb_thumb_width" format="dimension"/>
+        <attr name="rsb_thumb_height" format="dimension"/>
+        <attr name="rsb_thumb_scale_ratio" format="float"/>
+
+        <!--steps SeekBar-->
+        <attr name="rsb_steps" format="integer"/>
+        <attr name="rsb_step_color" format="color"/>
+        <attr name="rsb_step_width" format="dimension"/>
+        <attr name="rsb_step_height" format="dimension"/>
+        <attr name="rsb_step_radius" format="dimension"/>
+        <attr name="rsb_step_auto_bonding" format="boolean"/>
+        <attr name="rsb_step_drawable" format="reference"/>
+
+    </declare-styleable>
+
+    <declare-styleable name="VerticalRangeSeekBar" >
+        <!--the vertical RangeSeekBar draw orientation-->
+        <attr name="rsb_orientation" format="enum">
+            <enum name="left" value="1"/>
+            <enum name="right" value="2"/>
+        </attr>
+        <attr name="rsb_tick_mark_orientation" format="enum">
+            <enum name="vertical" value="1"/>
+            <enum name="horizontal" value="2"/>
+        </attr>
+        <attr name="rsb_indicator_text_orientation" format="enum">
+            <enum name="vertical" value="1"/>
+            <enum name="horizontal" value="2"/>
+        </attr>
+    </declare-styleable>
+</resources>

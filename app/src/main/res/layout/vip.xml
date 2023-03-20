@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:id="@+id/vipL"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:background="@color/blue"
+  android:gravity="center_vertical"
+  android:visibility="gone"
+  android:padding="@dimen/content">
+
+  <com.android.widget.ZdImageView
+    android:id="@+id/vipIcon"
+    android:layout_width="100dp"
+    android:layout_height="@dimen/head"
+    android:scaleType="fitXY"
+    android:src="@mipmap/vip" />
+
+  <TextView
+    android:id="@+id/vipName"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/content"
+    android:text="无忧上传，极速审核!"
+    android:textSize="@dimen/bigSuper"
+    android:textColor="@color/fontLight"
+    android:textStyle="bold" />
+</LinearLayout>

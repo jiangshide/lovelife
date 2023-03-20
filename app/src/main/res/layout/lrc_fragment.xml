@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent">
+
+  <com.android.resource.view.lrc.LrcView
+    android:id="@+id/lrcView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_above="@+id/lrcBtnProgressL"
+    app:lrcAnimationDuration="1000"
+    app:lrcCurrentTextColor="@color/blueLight"
+    app:lrcDividerHeight="20dp"
+    app:lrcLabel="找不到歌词(@_@)"
+    app:lrcNormalTextColor="@color/txtGray"
+    app:lrcNormalTextSize="15sp"
+    app:lrcPadding="16dp"
+    app:lrcTextGravity="center"
+    app:lrcTextSize="15sp"
+    app:lrcTimeTextColor="#BDBDBD"
+    app:lrcTimelineColor="#80BDBDBD"
+    app:lrcTimelineTextColor="#9FA8DA" />
+  <ImageView
+    android:id="@+id/lrcSelected"
+    android:layout_width="@dimen/headSmall"
+    android:layout_height="@dimen/headSmall"
+    android:src="@drawable/selecte"
+    android:scaleType="centerCrop"
+    android:layout_alignParentRight="true"
+    android:layout_alignParentBottom="true"
+    android:layout_margin="30dp"
+    android:visibility="gone"
+    />
+</RelativeLayout>

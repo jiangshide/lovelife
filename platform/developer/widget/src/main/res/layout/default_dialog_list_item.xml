@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+  android:id="@+id/defaultDialogListItem"
+  android:layout_width="match_parent"
+  android:background="@drawable/list_item_selector"
+  android:layout_height="wrap_content"
+  android:gravity="center"
+  android:padding="15dp"
+  android:textColor="@color/font"
+  android:textSize="@dimen/big"
+  android:textStyle="bold" />

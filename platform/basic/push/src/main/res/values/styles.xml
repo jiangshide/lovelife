@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+  <style name="AppBaseTheme" parent="@android:style/Theme.NoTitleBar"/>
+
+  <style name="SplashAppTheme" parent="AppBaseTheme">
+    <item name="android:windowFullscreen">true</item>
+    <item name="android:windowDrawsSystemBarBackgrounds">false</item>
+    <item name="android:windowAnimationStyle">@style/MMAnimation.Activity.Holo</item>
+  </style>
+
+  <style name="MMAnimation.Activity.Holo" parent="@android:style/Animation">
+    <!--<item name="android:activityOpenEnterAnimation">@anim/pop_in</item>-->
+    <item name="android:activityOpenExitAnimation">@anim/anim_not_change</item>
+    <item name="android:activityCloseEnterAnimation">@anim/anim_not_change</item>
+    <!--<item name="android:activityCloseExitAnimation">@anim/pop_out</item>-->
+  </style>
+</resources>

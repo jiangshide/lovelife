@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:padding="@dimen/content">
+
+  <FrameLayout
+    android:id="@+id/audioPlayF"
+    android:layout_width="300dp"
+    android:layout_height="300dp"
+    android:layout_centerHorizontal="true">
+
+    <com.android.resource.audio.ProgressView
+      android:id="@+id/audioPlayProgress"
+      android:layout_width="300dp"
+      android:layout_height="300dp"
+      android:layout_gravity="center"
+      android:transitionName="@string/transition_name_progress"
+      android:visibility="visible"
+      app:backgroundColor="@color/blueLight"
+      app:foregroundColor="@color/white"
+      app:strokeSize="20" />
+
+    <ImageView
+      android:id="@+id/audioPlayCover"
+      android:layout_width="285dp"
+      android:layout_height="285dp"
+      android:layout_gravity="center"
+      android:scaleType="centerCrop"
+      android:src="@mipmap/default_user" />
+
+    <FrameLayout
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="center|bottom">
+
+      <ImageView
+        android:id="@+id/audioPlayHead"
+        android:layout_width="@dimen/head"
+        android:layout_height="@dimen/head"
+        android:src="@mipmap/default_user" />
+
+      <ImageView
+        android:id="@+id/audioPlayHeadV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:alpha="0.5"
+        android:src="@mipmap/v" />
+    </FrameLayout>
+
+    <ImageView
+      android:id="@+id/audioPlay"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="center"
+      android:src="@mipmap/play" />
+  </FrameLayout>
+
+  <TextView
+    android:id="@+id/audioPlayDuration"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/audioPlayF"
+    android:layout_marginLeft="10dp"
+    android:layout_marginTop="-100dp"
+    android:textColor="@color/font"
+    android:textSize="@dimen/normal" />
+
+  <TextView
+    android:id="@+id/audioPlayTime"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/audioPlayF"
+    android:layout_alignParentRight="true"
+    android:layout_marginTop="-100dp"
+    android:layout_marginRight="10dp"
+    android:textColor="@color/font"
+    android:textSize="@dimen/normal" />
+
+  <LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_below="@+id/audioPlayF"
+    android:layout_marginTop="-50dp"
+    >
+
+
+  <com.android.resource.view.like.LikeButton
+    android:id="@+id/audioPlayLikeBtn"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:icon_size="22dp"
+    app:anim_scale_factor="3"
+    app:icon_type="heart" />
+    <TextView
+      android:id="@+id/audioPlayLike"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:textColor="@color/font"
+      android:layout_marginTop="-20dp"
+      android:gravity="center" />
+  </LinearLayout>
+
+  <com.android.widget.ZdButton
+    android:id="@+id/audioPlayFollow"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/audioPlayF"
+    android:layout_alignParentRight="true"
+    android:layout_marginTop="-25dp"
+    android:layout_marginRight="10dp"
+    android:gravity="center"
+    android:paddingLeft="@dimen/content"
+    android:paddingTop="5dp"
+    android:paddingRight="@dimen/content"
+    android:paddingBottom="5dp"
+    android:text="取消关注"
+    android:textColor="@color/white"
+    android:textSize="@dimen/normal"
+    android:visibility="gone"
+    app:corner="2dp"
+    app:normal_color="@color/alpha"
+    app:stroke="1dp"
+    app:stroke_color="@color/white" />
+
+  <LinearLayout
+    android:id="@+id/audioPlayNameL"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/audioPlayF"
+    android:layout_centerHorizontal="true"
+    android:layout_marginTop="@dimen/content"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <TextView
+      android:id="@+id/audioPlayName"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:textSize="@dimen/normal"
+      android:textColor="@color/font"
+      android:textStyle="bold" />
+
+    <TextView
+      android:id="@+id/audioPlayAuth"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:textSize="@dimen/small"
+      android:textStyle="bold"
+      android:textColor="@color/fontLight"
+      />
+
+  </LinearLayout>
+
+  <LinearLayout
+    android:id="@+id/audioPlayMenusL"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/audioPlayNameL"
+    android:layout_marginTop="30dp"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <ImageButton
+      android:id="@+id/audioPlayMenusMode"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_weight="1"
+      android:background="@color/alpha"
+      android:src="@mipmap/play_loop_single" />
+
+    <ImageButton
+      android:id="@+id/audioPlayMenusPre"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_weight="1"
+      android:background="@color/alpha"
+      android:src="@mipmap/play_prev" />
+
+    <ImageButton
+      android:id="@+id/audioPlayMenusPlay"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_weight="1"
+      android:background="@color/alpha"
+      android:src="@drawable/play" />
+
+    <ImageButton
+      android:id="@+id/audioPlayMenusNext"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_weight="1"
+      android:background="@color/alpha"
+      android:src="@mipmap/play_next" />
+
+    <FrameLayout
+      android:id="@+id/audioPlayMenusMsgF"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_weight="1">
+
+      <ImageButton
+        android:id="@+id/audioPlayChatBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginRight="@dimen/content"
+        android:layout_weight="1"
+        android:background="@color/alpha"
+        android:src="@mipmap/tab_icon_chat_def"
+        android:tint="@color/white" />
+
+      <TextView
+        android:id="@+id/audioPlayChatNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center"
+        android:textColor="@color/white"
+        android:textSize="@dimen/small"
+        android:layout_marginLeft="@dimen/content"
+        android:textStyle="bold" />
+    </FrameLayout>
+
+    <FrameLayout
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_weight="1"
+      android:visibility="gone">
+
+      <ImageButton
+        android:id="@+id/audioPlayMenusDown"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginRight="6dp"
+        android:layout_weight="1"
+        android:background="@color/alpha"
+        android:src="@mipmap/download" />
+
+      <com.android.widget.ZdTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center"
+        android:alpha="0.4"
+        android:text="¥"
+        android:textColor="@color/blue"
+        android:textSize="@dimen/small"
+        android:textStyle="bold" />
+    </FrameLayout>
+  </LinearLayout>
+
+  <com.android.player.audio.AudioView
+    android:id="@+id/audioPlayWave"
+    android:layout_width="match_parent"
+    android:layout_height="90dp"
+    android:layout_below="@+id/audioPlayMenusL" />
+</RelativeLayout>

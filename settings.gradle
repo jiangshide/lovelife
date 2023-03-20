@@ -1,0 +1,39 @@
+include ':ad'
+include ':app',':resource',':base',':refresh',':tablayout',':widget',':utils',':http',':cache',':img',':player',':location',':network',':permission',':files',':videoprocessor',':filter',':annotations',':compile',':router',':event',':jpush'
+rootProject.name = "sanskrit"
+
+//ad
+project(':ad').projectDir = new File('platform/advert/ad')
+
+//developer
+project(':base').projectDir = new File('platform/developer/base')
+project(':refresh').projectDir = new File('platform/developer/refresh')
+project(':tablayout').projectDir = new File('platform/developer/tablayout')
+project(':widget').projectDir = new File('platform/developer/widget')
+
+//basic
+project(':utils').projectDir = new File('platform/basic/utils')
+project(':http').projectDir = new File('platform/basic/http')
+project(':cache').projectDir = new File('platform/basic/cache')
+project(':img').projectDir = new File('platform/basic/img')
+project(':player').projectDir = new File('platform/basic/player')
+project(':location').projectDir = new File('platform/basic/location')
+project(':network').projectDir = new File('platform/basic/network')
+project(':permission').projectDir = new File('platform/basic/permission')
+project(':files').projectDir = new File('platform/basic/files')
+project(':videoprocessor').projectDir = new File('platform/basic/videoprocessor')
+project(':filter').projectDir = new File('platform/basic/filter')
+//project(':web').projectDir = new File('platform/basic/web')
+//project(':analyse').projectDir = new File('platform/basic/analyse')
+//project(':camera').projectDir = new File('platform/basic/camera')
+
+
+//core
+project(':annotations').projectDir = new File('platform/core/annotations')
+project(':compile').projectDir = new File('platform/core/compile')
+project(':router').projectDir = new File('platform/core/router')
+project(':event').projectDir = new File('platform/core/event')
+
+//third
+//project(':rongcloud').projectDir = new File('platform/third/im/rongcloud')
+project(':jpush').projectDir = new File('platform/third/jpush')

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/topL"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/topBar"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:visibility="gone">
+
+    <com.android.widget.ZdButton
+        android:id="@+id/topLeftBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/content"
+        android:drawableLeft="@mipmap/back"
+        android:gravity="center"
+        android:minWidth="35dp"
+        android:textSize="@dimen/normal"
+        android:textStyle="bold"
+        app:normal_color="@color/alpha"
+        app:press_color="@color/alpha" />
+
+    <LinearLayout
+        android:id="@+id/topTitleL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_toLeftOf="@+id/topRightBtn"
+        android:layout_toRightOf="@+id/topLeftBtn"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="@dimen/content">
+
+        <com.android.widget.ZdTextView
+            android:id="@+id/topTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textSize="@dimen/normal"
+            android:textStyle="bold" />
+
+        <com.android.widget.ZdTextView
+            android:id="@+id/topTitleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/fontLight"
+            android:textSize="@dimen/small"
+            android:textStyle="bold"
+            android:visibility="gone"
+            app:is_light="true" />
+    </LinearLayout>
+
+    <com.android.widget.ZdButton
+        android:id="@+id/topRightBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/content"
+        android:drawableRight="@mipmap/more"
+        android:gravity="center"
+        android:textSize="@dimen/normal"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        app:normal_color="@color/alpha"
+        app:press_color="@color/alpha" />
+</RelativeLayout>

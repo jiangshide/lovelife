@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:orientation="vertical"
+  android:paddingLeft="@dimen/content"
+  android:paddingTop="5dp"
+  android:paddingRight="@dimen/content"
+  android:paddingBottom="20dp">
+
+  <TextView
+    android:id="@+id/blogImgItemTitle"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:textColor="@color/font"
+    android:textStyle="bold" />
+
+  <com.android.widget.ZdTextView
+    android:id="@+id/blogImgItemContent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="5dp"
+    android:textSize="@dimen/normal"
+    android:textStyle="normal"
+    app:close="折叠"
+    app:more="展开"
+    app:tips_color="@color/txtGray"
+    app:text_color="@color/font"
+    />
+</LinearLayout>

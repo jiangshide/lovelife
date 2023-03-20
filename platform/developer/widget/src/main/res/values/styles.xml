@@ -1,0 +1,100 @@
+<resources>
+
+  <!--    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">-->
+  <!--        &lt;!&ndash; Customize your theme here. &ndash;&gt;-->
+  <!--        <item name="colorPrimary">@color/colorPrimary</item>-->
+  <!--        <item name="colorAccent">@color/colorAccent</item>-->
+  <!--        <item name="colorPrimaryDark">@color/colorPrimary</item>-->
+  <!--    </style>-->
+
+  <style name="DialogTheme" parent="@android:style/Theme.Dialog">
+    <!-- 边框 -->
+<!--    <item name="android:windowFrame">@null</item>-->
+<!--    &lt;!&ndash; 是否浮现在activity之上 &ndash;&gt;-->
+<!--    <item name="android:windowIsFloating">true</item>-->
+<!--    &lt;!&ndash; 半透明 &ndash;&gt;-->
+<!--    <item name="android:windowIsTranslucent">true</item>-->
+<!--    &lt;!&ndash; 无标题 &ndash;&gt;-->
+<!--    <item name="windowNoTitle">true</item>-->
+<!--    <item name="background">@android:color/transparent</item>-->
+<!--    &lt;!&ndash; 背景透明 &ndash;&gt;-->
+<!--    <item name="android:windowBackground">@android:color/transparent</item>-->
+<!--    &lt;!&ndash; 模糊 &ndash;&gt;-->
+<!--    <item name="android:backgroundDimEnabled">true</item>-->
+<!--    &lt;!&ndash; 遮罩层 &ndash;&gt;-->
+<!--    <item name="android:backgroundDimAmount">0.5</item>-->
+
+    <item name="android:windowFrame">@null</item>
+    <item name="android:windowBackground">@android:color/transparent</item>
+    <item name="android:windowNoTitle">true</item>
+    <item name="android:windowIsFloating">true</item>
+    <item name="android:windowContentOverlay">@null</item>
+    <item name="android:windowAnimationStyle">@style/bottomAnim</item>
+  </style>
+
+  <style name="DialogThemeAlpha" parent="@android:style/Theme.Dialog">
+    <!-- 边框 -->
+    <item name="android:windowFrame">@null</item>
+    <!-- 是否浮现在activity之上 -->
+    <item name="android:windowIsFloating">true</item>
+    <!-- 半透明 -->
+    <item name="android:windowIsTranslucent">true</item>
+    <!-- 无标题 -->
+    <item name="windowNoTitle">true</item>
+    <item name="background">@android:color/transparent</item>
+    <!-- 背景透明 -->
+    <item name="android:windowBackground">@android:color/transparent</item>
+    <!-- 模糊 -->
+    <item name="android:backgroundDimEnabled">true</item>
+    <!-- 遮罩层 -->
+    <item name="android:backgroundDimAmount">0</item>
+
+    <!--<item name="android:windowAnimationStyle">@style/bottomAnim</item>-->
+  </style>
+
+  <style name="topAnim">
+    <item name="android:windowEnterAnimation">@anim/top_enter</item>
+    <item name="android:windowExitAnimation">@anim/top_exit</item>
+  </style>
+
+  <style name="bottomAnim">
+    <item name="android:windowEnterAnimation">@anim/bottom_enter</item>
+    <item name="android:windowExitAnimation">@anim/bottom_exit</item>
+  </style>
+
+  <style name="bottom">
+    <item name="android:windowEnterAnimation">@anim/bottom_enter</item>
+  </style>
+
+  <style name="ZdEditText" parent="Theme.AppCompat.Light">
+    <item name="colorControlNormal">@color/whiteLight</item>
+    <item name="colorControlActivated">@color/whiteLight</item>
+  </style>
+
+  <!--    <style name="TranslucentTheme">-->
+  <!--        <item name="android:windowBackground">@android:color/transparent</item>-->
+  <!--        <item name="android:colorBackgroundCacheHint">@null</item>-->
+  <!--        <item name="android:windowIsTranslucent">true</item>-->
+  <!--        <item name="android:windowAnimationStyle">@android:style/Animation</item>-->
+  <!--        <item name="windowNoTitle">true</item>-->
+  <!--        <item name="android:windowContentOverlay">@null</item>-->
+  <!--    </style>-->
+
+  <!--    <style name="jc_style_dialog_progress" parent="@android:style/Theme.Dialog">-->
+  <!--        <item name="android:windowBackground">@android:color/transparent</item>-->
+  <!--        <item name="windowNoTitle">true</item>-->
+  <!--        <item name="android:windowAnimationStyle">@style/jc_popup_toast_anim</item>-->
+  <!--        <item name="android:backgroundDimEnabled">false</item>-->
+  <!--    </style>-->
+
+  <!--    <style name="jc_popup_toast_anim" parent="@android:style/Animation">-->
+  <!--        <item name="android:windowEnterAnimation">@android:anim/fade_in</item>-->
+  <!--        <item name="android:windowExitAnimation">@android:anim/fade_out</item>-->
+  <!--    </style>-->
+
+  <style name="ActivityTheme" parent="android:Theme.Light">
+    <item name="android:windowIsTranslucent">true</item>
+    <item name="android:windowNoTitle">true</item>
+    <item name="android:windowBackground">@android:color/transparent</item>
+  </style>
+</resources>

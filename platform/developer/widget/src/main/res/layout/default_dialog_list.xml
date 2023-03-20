@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:orientation="vertical"
+  android:padding="10dp">
+
+  <RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1"
+    >
+
+    <ListView
+      android:id="@+id/defaultDialogList"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginBottom="5dp"
+      android:background="@drawable/bg_dialog_radius"
+      android:divider="@color/bg"
+      android:layout_alignParentBottom="true"
+      android:dividerHeight="1px"
+      android:listSelector="@color/alpha"
+      android:orientation="vertical"
+      android:scrollbars="none" />
+  </RelativeLayout>
+
+  <com.android.widget.ZdButton
+    android:id="@+id/defaultDialogCancel"
+    android:layout_width="match_parent"
+    android:layout_height="45dp"
+    android:padding="@dimen/content"
+    android:text="@string/cancel"
+    android:textColor="@color/fontLight"
+    android:textSize="16sp"
+    android:textStyle="bold"
+    app:corner="6dp"
+    app:normal_color="@color/bg"
+    app:press_color="@color/gray"
+    />
+</LinearLayout>

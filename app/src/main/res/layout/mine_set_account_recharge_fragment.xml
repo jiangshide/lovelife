@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent">
+
+  <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/content">
+
+    <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="@dimen/content"
+      android:layout_marginBottom="@dimen/content"
+      android:text="@string/recharge_quota"
+      android:textSize="@dimen/normal"
+      android:textColor="@color/font"
+      android:textStyle="bold" />
+
+    <com.android.widget.ZdRecycleView
+      android:id="@+id/rechargeQuotaRecycleView"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content" />
+
+    <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="@dimen/content"
+      android:layout_marginBottom="@dimen/content"
+      android:text="@string/recharge_type"
+      android:textColor="@color/font"
+      android:textSize="@dimen/normal"
+      android:textStyle="bold" />
+
+    <com.android.widget.ZdRecycleView
+      android:id="@+id/rechargeTypeRecycleView"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content" />
+
+    <com.android.widget.ZdButton
+      android:id="@+id/rechargeSubmit"
+      android:layout_width="match_parent"
+      android:layout_height="@dimen/buttonHeight"
+      android:layout_marginTop="30dp"
+      android:onClick="userLogin"
+      android:text="立即充值"
+      android:textColor="@color/white"
+      android:textSize="16sp"
+      android:textStyle="bold"
+      app:corner="@dimen/button"
+      app:normal_color="@color/black" />
+  </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="SideBar">
+        <attr name="letterColor" format="color"/>
+        <attr name="selectColor" format="color"/>
+        <attr name="letterSize" format="dimension"/>
+    </declare-styleable>
+
+    <declare-styleable name="TagCloudView">
+        <attr name="autoScrollMode">
+            <enum name="disable" value="0"/>
+            <enum name="decelerate" value="1"/>
+            <enum name="uniform" value="2"/>
+        </attr>
+        <attr name="manualScroll" format="boolean"/>
+        <attr name="radiusPercent" format="float"/>
+        <attr name="scrollSpeed" format="float"/>
+        <attr name="lightColor" format="color"/>
+        <attr name="darkColor" format="color"/>
+        <attr name="startAngleX" format="float"/>
+        <attr name="startAngleY" format="float"/>
+    </declare-styleable>
+
+    <declare-styleable name="FoldingMenu">
+        <attr name="foldNumber" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="RoundProgress">
+        <attr name="strokeSize" format="integer"/>
+        <attr name="foregroundColor" format="color"/>
+        <attr name="backgroundColor" format="color"/>
+        <attr name="startAngle" format="float"/>
+        <attr name="middleAngle" format="float"/>
+        <attr name="gapAngle" format="float"/>
+        <attr name="fullProgressAngle" format="float"/>
+    </declare-styleable>
+
+    <declare-styleable name="ArcSeekBar">
+        <attr name="arc_width" format="dimension|reference" />
+        <attr name="arc_open_angle" format="float" />
+        <attr name="arc_rotate_angle" format="float" />
+        <attr name="arc_colors" format="reference" />
+        <attr name="arc_border_width" format="dimension|reference" />
+        <attr name="arc_border_color" format="color|reference" />
+        <attr name="arc_max" format="integer|reference" />
+        <attr name="arc_min" format="integer|reference" />
+        <attr name="arc_progress" format="integer|reference" />
+        <attr name="arc_thumb_width" format="dimension|reference" />
+        <attr name="arc_thumb_color" format="color|reference" />
+        <attr name="arc_thumb_radius" format="dimension|reference" />
+        <attr name="arc_thumb_shadow_radius" format="dimension|reference" />
+        <attr name="arc_thumb_shadow_color" format="color|reference" />
+        <attr name="arc_thumb_mode" format="integer|dimension">
+            <enum name="STROKE" value="0" />
+            <enum name="FILL" value="1" />
+            <enum name="FILL_STROKE" value="2" />
+        </attr>
+        <attr name="arc_shadow_radius" format="dimension|reference" />
+    </declare-styleable>
+
+    <declare-styleable name="LrcView">
+        <attr name="lrcTextSize" format="dimension" />
+        <attr name="lrcNormalTextSize" format="dimension" />
+        <attr name="lrcDividerHeight" format="dimension" />
+        <attr name="lrcNormalTextColor" format="reference|color" />
+        <attr name="lrcCurrentTextColor" format="reference|color" />
+        <attr name="lrcTimelineTextColor" format="reference|color" />
+        <attr name="lrcAnimationDuration" format="integer" />
+        <attr name="lrcLabel" format="string" />
+        <attr name="lrcPadding" format="dimension" />
+        <attr name="lrcTimelineColor" format="reference|color" />
+        <attr name="lrcTimelineHeight" format="dimension" />
+        <attr name="lrcPlayDrawable" format="reference" />
+        <attr name="lrcTimeTextColor" format="reference|color" />
+        <attr name="lrcTimeTextSize" format="dimension" />
+        <attr name="lrcTextGravity">
+            <enum name="center" value="0" />
+            <enum name="left" value="1" />
+            <enum name="right" value="2" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="LikeButton">
+        <attr name="icon_type" format="string" />
+        <attr name="icon_size" format="dimension|reference"/>
+        <attr name="like_drawable" format="reference" />
+        <attr name="unlike_drawable" format="reference" />
+        <attr name="dots_primary_color" format="color|reference" />
+        <attr name="dots_secondary_color" format="color|reference" />
+        <attr name="circle_start_color" format="color|reference" />
+        <attr name="circle_end_color" format="color|reference" />
+        <attr name="liked" format="boolean"/>
+        <attr name="is_enabled" format="boolean"/>
+        <attr name="anim_scale_factor" format="float"/>
+    </declare-styleable>
+
+    <declare-styleable name="HeartLayout">
+        <attr name="heart_width" format="integer" />
+        <attr name="heart_height" format="integer" />
+        <attr name="heart_image_resId" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="SlidingUpPanelLayout">
+        <attr name="spl_disableSliding" format="boolean"/>
+        <attr name="spl_expandThreshold" format="float"/>
+        <attr name="spl_collapseThreshold" format="float"/>
+    </declare-styleable>
+
+    <declare-styleable name="TextBanner">
+        <attr name="durations" format="integer" />
+        <attr name="delayTimes" format="integer" />
+        <attr name="animIns" format="reference" />
+        <attr name="animOuts" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="SwipeMenuLayout">
+        <attr name="swipeEnable" format="boolean"/>
+        <attr name="ios" format="boolean"/>
+        <attr name="leftSwipe" format="boolean"/>
+    </declare-styleable>
+</resources>

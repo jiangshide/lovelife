@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="share_success">Share success</string>
+    <string name="weixin_false">WeChat refused</string>
+    <string name="back">Return</string>
+
+
+    <string name="tips">Tips</string>
+
+    <string name="sure_exit">Are you sure you want to exit?</string>
+    <string name="cancel">Cancel</string>
+    <string name="off">Close</string>
+    <string name="sure">Sure</string>
+    <string name="no_content">Sorry, you don\'t have anything new!</string>
+
+    <string name="dot">·</string>
+</resources>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:gravity="center_vertical"
+  android:orientation="horizontal"
+  android:paddingLeft="@dimen/content"
+  android:paddingTop="5dp"
+  android:paddingRight="@dimen/content"
+  android:paddingBottom="5dp"
+  >
+
+  <LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentLeft="true"
+    android:layout_centerVertical="true"
+    android:layout_toLeftOf="@+id/blogItemFootLike"
+    android:orientation="horizontal">
+
+    <com.android.widget.ZdButton
+      android:id="@+id/blogImgItemChannel"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:ellipsize="end"
+      android:maxLength="20"
+      android:maxLines="1"
+      android:paddingLeft="10dp"
+      android:paddingTop="3dp"
+      android:paddingRight="10dp"
+      android:paddingBottom="3dp"
+      android:text="# 环球旅行"
+      android:textColor="@color/font"
+      android:textSize="@dimen/small"
+      android:textStyle="bold"
+      app:corner="5dp"
+      app:normal_color="@color/blue" />
+
+    <TextView
+      android:id="@+id/blogImgItemLocation"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:drawableLeft="@mipmap/location"
+      android:ellipsize="end"
+      android:layout_marginLeft="10dp"
+      android:maxLines="1"
+      android:text="北京市"
+      android:drawableTint="@color/blue"
+      android:drawablePadding="2dp"
+      android:textColor="@color/font"
+      android:textSize="@dimen/normal"
+      android:textStyle="bold"
+      />
+  </LinearLayout>
+
+  <TextView
+    android:id="@+id/blogItemFootLike"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerVertical="true"
+    android:layout_gravity="right"
+    android:layout_marginRight="10dp"
+    android:layout_toLeftOf="@+id/blogItemFootView"
+    android:drawableLeft="@drawable/like_write"
+    android:drawablePadding="5dp"
+    android:gravity="center"
+    android:textSize="@dimen/small"
+    android:textStyle="bold"
+    android:textColor="@color/font"
+    android:visibility="visible" />
+
+  <TextView
+    android:id="@+id/blogItemFootView"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerVertical="true"
+    android:layout_marginRight="10dp"
+    android:layout_toLeftOf="@+id/blogItemFootChat"
+    android:drawableLeft="@mipmap/ic_blog_view_count"
+    android:drawablePadding="5dp"
+    android:gravity="center"
+    android:textSize="@dimen/small"
+    android:textStyle="bold"
+    android:textColor="@color/font"
+    android:visibility="gone" />
+
+  <TextView
+    android:id="@+id/blogItemFootChat"
+    android:layout_width="wrap_content"
+    android:layout_height="30dp"
+    android:layout_centerVertical="true"
+    android:layout_marginRight="10dp"
+    android:layout_toLeftOf="@+id/blogItemFootShare"
+    android:drawableLeft="@mipmap/tab_icon_chat_def"
+    android:drawablePadding="5dp"
+    android:gravity="center"
+    android:textSize="@dimen/small"
+    android:textStyle="bold"
+    android:textColor="@color/font"
+    android:visibility="visible" />
+
+  <TextView
+    android:id="@+id/blogItemFootShare"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentRight="true"
+    android:layout_centerVertical="true"
+    android:drawableLeft="@drawable/collection"
+    android:drawablePadding="5dp"
+    android:gravity="center"
+    android:textSize="@dimen/small"
+    android:textStyle="bold"
+    android:textColor="@color/font"
+    android:visibility="visible" />
+</RelativeLayout>

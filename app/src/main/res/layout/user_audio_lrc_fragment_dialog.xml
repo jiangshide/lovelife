@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:background="@drawable/bg_radius_white"
+  android:orientation="vertical"
+  android:padding="@dimen/content">
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/content"
+    >
+
+    <LinearLayout
+      android:id="@+id/lrcSearchL"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_weight="1"
+      android:gravity="center"
+      android:orientation="vertical">
+
+      <ImageButton
+        android:id="@+id/lrcSearch"
+        android:layout_width="@dimen/head"
+        android:layout_height="@dimen/head"
+        android:layout_margin="5dp"
+        android:background="@drawable/follow_circle"
+        android:padding="@dimen/content"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/search"
+        android:tint="@color/white" />
+
+      <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="歌词搜索"
+        android:textColor="@color/font"
+        android:textSize="@dimen/normal" />
+    </LinearLayout>
+    <LinearLayout
+      android:id="@+id/makeLrcL"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_weight="1"
+      android:gravity="center"
+      android:orientation="vertical">
+
+      <ImageButton
+        android:id="@+id/makeLrc"
+        android:layout_width="@dimen/head"
+        android:layout_height="@dimen/head"
+        android:layout_margin="5dp"
+        android:background="@drawable/follow_circle"
+        android:focusable="false"
+        android:src="@mipmap/txt"
+        android:tint="@color/white" />
+
+      <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="添加歌词"
+        android:textColor="@color/font"
+        android:textSize="@dimen/normal" />
+    </LinearLayout>
+    <LinearLayout
+      android:id="@+id/audioDetailL"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_weight="1"
+      android:gravity="center"
+      android:visibility="gone"
+      android:orientation="vertical">
+
+      <ImageButton
+        android:id="@+id/audioDetail"
+        android:layout_width="@dimen/head"
+        android:layout_height="@dimen/head"
+        android:layout_margin="5dp"
+        android:background="@drawable/follow_circle"
+        android:focusable="false"
+        android:padding="@dimen/content"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/info"
+        android:tint="@color/white" />
+
+      <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="歌曲详情"
+        android:textColor="@color/font"
+        android:textSize="@dimen/normal" />
+    </LinearLayout>
+
+    <LinearLayout
+      android:id="@+id/lrcFeedbackL"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_weight="1"
+      android:gravity="center"
+      android:orientation="vertical">
+
+      <ImageButton
+        android:id="@+id/lrcFeedback"
+        android:layout_width="@dimen/head"
+        android:layout_height="@dimen/head"
+        android:layout_margin="5dp"
+        android:background="@drawable/follow_circle"
+        android:focusable="false"
+        android:src="@mipmap/feedback"
+        android:tint="@color/white" />
+
+      <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="歌词反馈"
+        android:textColor="@color/font"
+        android:textSize="@dimen/normal" />
+    </LinearLayout>
+  </LinearLayout>
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="horizontal"
+    >
+
+    <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="center_vertical"
+      android:gravity="center_vertical"
+      android:text="歌词进度"
+      android:textColor="@color/font"
+      android:textSize="13dp"></TextView>
+
+    <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:padding="@dimen/content"
+      >
+
+      <com.android.widget.ZdButton
+        android:id="@+id/progressAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:paddingLeft="@dimen/content"
+        android:paddingTop="5dp"
+        android:paddingRight="@dimen/content"
+        android:paddingBottom="5dp"
+        android:text="《《-0.5秒"
+        android:textColor="@color/font"
+        android:textSize="@dimen/normal"
+        app:normal_color="@color/fontLight" />
+
+      <com.android.widget.ZdButton
+        android:id="@+id/progressReset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:paddingLeft="@dimen/content"
+        android:paddingTop="5dp"
+        android:paddingRight="@dimen/content"
+        android:paddingBottom="5dp"
+        android:text="重置"
+        android:textColor="@color/font"
+        android:textSize="@dimen/normal"
+        app:normal_color="@color/blue" />
+
+      <com.android.widget.ZdButton
+        android:id="@+id/progressReduce"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:paddingLeft="@dimen/content"
+        android:paddingTop="5dp"
+        android:paddingRight="@dimen/content"
+        android:paddingBottom="5dp"
+        android:text="+0.5秒》》"
+        android:textColor="@color/font"
+        android:textSize="@dimen/normal"
+        app:normal_color="@color/fontLight" />
+    </RelativeLayout>
+  </LinearLayout>
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <TextView
+      android:id="@+id/fontSize"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_centerVertical="true"
+      android:text="字体大小"
+      android:textColor="@color/font"
+      android:textSize="@dimen/normal" />
+
+    <com.android.widget.ZdButton
+      android:id="@+id/fontReduce"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="小"
+      android:layout_marginLeft="@dimen/content"
+      android:layout_marginTop="@dimen/content"
+      android:layout_marginBottom="@dimen/content"
+      android:paddingLeft="@dimen/content"
+      android:paddingTop="5dp"
+      android:paddingRight="@dimen/content"
+      android:paddingBottom="5dp"
+      android:textColor="@color/font"
+      android:textSize="@dimen/normal"
+      app:normal_color="@color/fontLight" />
+
+    <SeekBar
+      android:id="@+id/fontSizeSeekBar"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_weight="1"
+      android:thumb="@drawable/seek_thumb"
+      android:progressDrawable="@drawable/seek_progress"
+      android:maxHeight="2dp"
+      android:max="50"
+      android:minHeight="1dp"
+      android:thumbOffset="0dp"
+      />
+
+    <com.android.widget.ZdButton
+      android:id="@+id/fontAdd"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:paddingLeft="@dimen/content"
+      android:paddingTop="5dp"
+      android:paddingRight="@dimen/content"
+      android:paddingBottom="5dp"
+      android:text="大"
+      android:textColor="@color/font"
+      android:textSize="@dimen/normal"
+      app:normal_color="@color/fontLight" />
+  </LinearLayout>
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:layout_marginTop="@dimen/content"
+    android:layout_marginBottom="@dimen/content"
+    >
+    <TextView
+      android:id="@+id/fontLightColor"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_centerVertical="true"
+      android:text="高亮字体颜色"
+      android:textColor="@color/font"
+      android:textSize="@dimen/normal" />
+    <ImageButton
+      android:id="@+id/fontLightColorBlue"
+      android:layout_width="40dp"
+      android:layout_height="40dp"
+      android:background="@drawable/follow_circle"
+      android:tint="@color/white"
+      android:layout_marginLeft="@dimen/content"
+      />
+    <ImageButton
+      android:id="@+id/fontLightColorFans"
+      android:layout_width="40dp"
+      android:layout_height="40dp"
+      android:background="@drawable/praise_circle"
+      android:layout_marginLeft="@dimen/content"
+      />
+    <ImageButton
+      android:id="@+id/fontLightColorYellow"
+      android:layout_width="40dp"
+      android:layout_height="40dp"
+      android:background="@drawable/fans_circle"
+      android:layout_marginLeft="@dimen/content"
+      />
+    <ImageButton
+      android:id="@+id/fontLightColorGreen"
+      android:layout_width="40dp"
+      android:layout_height="40dp"
+      android:background="@drawable/view_circle"
+      android:layout_marginLeft="@dimen/content"
+      />
+    <com.android.widget.ZdButton
+      android:id="@+id/fontLightColorRandom"
+      android:layout_width="40dp"
+      android:layout_height="40dp"
+      android:text="随机"
+      android:layout_marginLeft="@dimen/content"
+      app:normal_color="@color/blueLight"
+      app:corner="180dp"
+      android:textSize="@dimen/normal"
+      android:textColor="@color/white"
+      />
+  </LinearLayout>
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:layout_marginTop="@dimen/content"
+    android:layout_marginBottom="@dimen/content"
+    >
+    <TextView
+      android:id="@+id/fontColor"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_centerVertical="true"
+      android:text="正常字体颜色"
+      android:textColor="@color/font"
+      android:textSize="@dimen/normal" />
+    <ImageButton
+      android:id="@+id/fontColorBlue"
+      android:layout_width="40dp"
+      android:layout_height="40dp"
+      android:background="@drawable/follow_circle"
+      android:tint="@color/white"
+      android:layout_marginLeft="@dimen/content"
+      />
+    <ImageButton
+      android:id="@+id/fontColorFans"
+      android:layout_width="40dp"
+      android:layout_height="40dp"
+      android:background="@drawable/praise_circle"
+      android:layout_marginLeft="@dimen/content"
+      />
+    <ImageButton
+      android:id="@+id/fontColorYellow"
+      android:layout_width="40dp"
+      android:layout_height="40dp"
+      android:background="@drawable/fans_circle"
+      android:layout_marginLeft="@dimen/content"
+      />
+    <ImageButton
+      android:id="@+id/fontColorGreen"
+      android:layout_width="40dp"
+      android:layout_height="40dp"
+      android:background="@drawable/view_circle"
+      android:layout_marginLeft="@dimen/content"
+      />
+    <com.android.widget.ZdButton
+      android:id="@+id/fontColorRandom"
+      android:layout_width="40dp"
+      android:layout_height="40dp"
+      android:text="随机"
+      android:layout_marginLeft="@dimen/content"
+      app:normal_color="@color/blueLight"
+      app:corner="180dp"
+      android:textSize="@dimen/normal"
+      android:textColor="@color/font"
+      />
+  </LinearLayout>
+  <com.android.widget.ZdButton
+    android:id="@+id/lrcDialogCancel"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:padding="@dimen/content"
+    android:text="取消"
+    android:textColor="@color/font"
+    android:textStyle="bold"
+    app:normal_color="@color/alpha"
+    />
+</LinearLayout>

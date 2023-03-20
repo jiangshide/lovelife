@@ -1,0 +1,13 @@
+一.模块:analyse
+功能:解决埋点与数据分析的基础集成
+使用方式:
+  1.单事件:
+    Analyse.event(key,value);
+  2.单事件可选次数:
+    Analyse.event(key,value,times);
+  3.组件附件事件:
+    Analyse.event(view,map<String>);
+  4.事件起始时
+    Analyse.eventStart(key,value);
+  4.事件结束时
+    Analyse.eventEnd(key,value);

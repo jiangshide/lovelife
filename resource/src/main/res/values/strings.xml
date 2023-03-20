@@ -1,0 +1,111 @@
+<resources>
+  <string name="app_name">@string/appName</string>
+
+  <string name="account">账号</string>
+
+  <string name="feedback_tips">您的联系方式有助于我们沟通和改善问题，只有工作人员可见</string>
+  <string name="feedback">请填写8个字以上的问题描述,以便于我们提供更好的帮助...</string>
+  <string name="contact">微信,QQ,邮箱或者联系电话</string>
+  <string name="success">提交成功</string>
+  <string-array name="main">
+    <item>首页</item>
+    <item>频道</item>
+    <item></item>
+    <item>消息</item>
+    <item>我的</item>
+  </string-array>
+
+  <string-array name="hobby">
+    <item>运动</item>
+    <item>电影</item>
+    <item>画画</item>
+    <item>弹琴</item>
+    <item>唱歌</item>
+    <item>跳舞</item>
+    <item>看书</item>
+    <item>美食</item>
+    <item>摄影</item>
+    <item>旅游</item>
+    <item>汽车</item>
+    <item>模特</item>
+    <item>科技</item>
+  </string-array>
+
+  <string-array name="money">
+    <item>充值记录</item>
+    <item>消费记录</item>
+    <item>打赏记录</item>
+    <item>积分记录</item>
+  </string-array>
+
+  <string-array name="pay">
+    <item>微信</item>
+    <item>支付宝</item>
+    <item>QQ钱包</item>
+    <item>蚂蚁花贝</item>
+  </string-array>
+
+  <string name="recharge_quota">充值金额</string>
+  <string name="recharge_type">支付方式</string>
+
+
+  <string name="finish">完成</string>
+  <string name="publish_input_music_name">输入音频名称(20个字以内)</string>
+  <string name="publish_input_music_desc">输入音频配文</string>
+  <string name="publish_input_doc_name">心灵标题(最多12个字)</string>
+  <string name="publish_input_doc_desc">内容简介...(最好大于20个字)</string>
+
+  <string name="publish_audio_reset">重录</string>
+  <string name="no_audio">其他软件正在占用麦克风或者录音权限被禁止</string>
+
+  <string name="search">搜索</string>
+
+  <string name="province">省</string>
+  <string name="city">市</string>
+  <string name="district">区/县</string>
+
+  <string name="audit_status">审核状态：</string>
+  <string name="audit_under">审核中</string>
+  <string name="audit_pass">审核通过</string>
+  <string name="recycle">移到回忆箱</string>
+  <string name="audit_rejected">审核拒绝</string>
+  <string name="forbidden_words">禁言</string>
+  <string name="fold">关闭/折叠</string>
+
+  <string name="wechat_not_install">微信客户端未安装</string>
+  <string name="pay_result_callback_msg" formatted="false">微信支付结果：%s</string>
+  <string name="pay_result_tip">这个界面用于显示第三方app通过微信支付的结果</string>
+
+  <string name="unknow">未知</string>
+
+  <string name="resend">重发</string>
+
+  <string name="transition_name_progress" translatable="false">progress</string>
+
+  <string name="add">和</string>
+
+  <string name="comment_hint">喜欢就评论告诉TA...</string>
+  <string name="user_protocol">《梵记软件许可及服务协议》</string>
+  <string name="protect_protocol">《梵记隐私保护指引》</string>
+  <string name="summary_protocol_end">了解详情信息。</string>
+
+  <string name="summary_of_agreement">\t\t\t\t欢迎您使用梵记！请您务必审慎阅读、充分理解《梵记软件许可及服务协议》和《梵记隐私保护指引》各条款，包括但不限于:\n
+\t\t\t\t在您使用梵记服务时,我们会申请访问您的电话权限、收集您的号码、IMEI等设备标志及操作日志信息，用于标识您为梵记的用户及进行安全控制；\n
+\t\t\t\t为了您使用视频读取、上传分享等功能，我们会申请访问您设备上的照片、文件和媒体内容权限，收集您的相册或内存卡信息；\n
+\t\t\t\t为了您使用视频拍摄、声音录制功能，我们会申请访问您设备上的麦克风、摄像头权限；\n
+\t\t\t\t为了向您展示并推荐您附近的短视频及在您发布短视频时展示您的位置信息，我们会申请访问您的地理位置权限；\n
+\t\t\t\t为了使您通过梵记同其他用户互动，我们会收集您上传的评论、点赞信息；\n
+\t\t\t\t设备标识、麦克风、摄像头、相册/内存卡、GPS地理位置等权限信息我们均不会默认或者强制开启收集；\n
+\t\t\t\t我们将加密存储我们所收集的信息，保障您的信息安全，您也可以随时查看、更正、删除您的个人信息。\n
+\t\t\t\t你可以阅读完整版</string>
+
+  <string name="view_pager_bottom_sheet_behavior">com.android.resource.view.viewpagerofbottomsheet.ViewPagerBottomSheetBehavior</string>
+
+  <string name="lrc_label">暂无歌词</string>
+
+  //字体
+  <string name="ziti_jia">&#xe6f9;</string>
+  <string name="ziti_jian">&#xe6f6;</string>
+  <string name="create_channel">创建频道</string>
+  <string name="official_recommend">官方推荐</string>
+</resources>

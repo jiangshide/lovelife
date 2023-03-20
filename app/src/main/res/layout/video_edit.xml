@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.android.player.dplay.player.VideoView
+        android:id="@+id/mixVideoView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_margin="@dimen/content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/removeAudio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/select"
+            android:drawablePadding="5dp"
+            android:gravity="center"
+            android:layout_gravity="right"
+            android:layout_marginRight="@dimen/content"
+            android:text="消除原音"
+            android:textColor="@color/font"
+            android:textSize="@dimen/normal"
+            />
+
+        <com.android.widget.seekbar.RangeSeekBar
+            android:id="@+id/rangeSeekBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:rsb_gravity="center"
+            app:rsb_mode="range" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right|center_vertical"
+        android:layout_margin="@dimen/content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/mixVideoCut"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/content"
+            android:drawablePadding="@dimen/content"
+            android:gravity="center"
+            android:text="剪切"
+            android:textColor="@color/font"
+            android:textSize="@dimen/normal"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/mixVideoScale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/content"
+            android:drawablePadding="@dimen/content"
+            android:gravity="center"
+            android:text="魔放"
+            android:textColor="@color/font"
+            android:textSize="@dimen/normal"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/mixVideoAudio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/content"
+            android:drawablePadding="@dimen/content"
+            android:gravity="center"
+            android:text="音乐"
+            android:textColor="@color/font"
+            android:textSize="@dimen/normal"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/mixVideoInCreate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/content"
+            android:drawablePadding="@dimen/content"
+            android:gravity="center"
+            android:text="魔快"
+            android:textColor="@color/font"
+            android:textSize="@dimen/normal"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/mixVideoDeCreate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/content"
+            android:drawablePadding="@dimen/content"
+            android:gravity="center"
+            android:text="魔慢"
+            android:textColor="@color/font"
+            android:textSize="@dimen/normal"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/kichikuVideoDeCreate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/content"
+            android:drawablePadding="@dimen/content"
+            android:gravity="center"
+            android:text="鬼畜"
+            android:textColor="@color/font"
+            android:textSize="@dimen/normal"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/mixVideoReverse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/content"
+            android:drawablePadding="@dimen/content"
+            android:gravity="center"
+            android:text="逆放"
+            android:textColor="@color/font"
+            android:textSize="@dimen/normal"
+            android:textStyle="bold" />
+    </LinearLayout>
+</FrameLayout>

@@ -1,0 +1,78 @@
+<resources>
+    <string name="app_name">@string/appName</string>
+
+    <string name="account">账号</string>
+
+    <string name="feedback_tips">您的联系方式有助于我们沟通和改善问题，只有工作人员可见</string>
+    <string name="feedback">请填写8个字以上的问题描述,以便于我们提供更好的帮助...</string>
+    <string name="contact">微信,QQ,邮箱或者联系电话</string>
+    <string name="success">提交成功</string>
+    <string-array name="main">
+        <item>首页</item>
+        <item>频道</item>
+        <item></item>
+        <item>消息</item>
+        <item>我的</item>
+    </string-array>
+
+    <string-array name="hobby">
+        <item>运动</item>
+        <item>电影</item>
+        <item>画画</item>
+        <item>弹琴</item>
+        <item>唱歌</item>
+        <item>跳舞</item>
+        <item>看书</item>
+        <item>美食</item>
+        <item>摄影</item>
+        <item>旅游</item>
+        <item>汽车</item>
+        <item>模特</item>
+        <item>科技</item>
+    </string-array>
+
+    <string-array name="money">
+        <item>充值记录</item>
+        <item>消费记录</item>
+        <item>打赏记录</item>
+        <item>积分记录</item>
+    </string-array>
+
+    <string-array name="pay">
+        <item>微信</item>
+        <item>支付宝</item>
+        <item>QQ钱包</item>
+        <item>蚂蚁花贝</item>
+    </string-array>
+
+    <string name="recharge_quota">充值金额</string>
+    <string name="recharge_type">支付方式</string>
+
+
+    <string name="finish">完成</string>
+    <string name="publish_input_music_name">输入音频名称(20个字以内)</string>
+    <string name="publish_input_music_desc">输入音频配文</string>
+    <string name="publish_input_doc_name">心灵标题(最多12个字)</string>
+    <string name="publish_input_doc_desc">内容简介...(最好大于20个字)</string>
+
+    <string name="publish_audio_reset">重录</string>
+    <string name="no_audio">其他软件正在占用麦克风或者录音权限被禁止</string>
+
+    <string name="search">搜索</string>
+
+    <string name="audit_status">审核状态：</string>
+    <string name="audit_under">审核中</string>
+    <string name="audit_pass">审核通过</string>
+    <string name="recycle">移到回忆箱</string>
+    <string name="audit_rejected">审核拒绝</string>
+    <string name="forbidden_words">禁言</string>
+    <string name="fold">关闭/折叠</string>
+
+    <string name="wechat_not_install">微信客户端未安装</string>
+    <string name="pay_result_callback_msg" formatted="false">微信支付结果：%s</string>
+    <string name="pay_result_tip">这个界面用于显示第三方app通过微信支付的结果</string>
+
+    <string name="unknow">未知</string>
+
+    <string name="transition_name_progress" translatable="false">progress</string>
+</resources>

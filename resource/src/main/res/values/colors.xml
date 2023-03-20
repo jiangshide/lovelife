@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <color name="colorPrimary">@color/blackLightMiddle</color>
+  <color name="colorPrimaryDark">@color/blackLight</color>
+  <color name="colorAccent">@color/bg</color>
+
+  <color name="disable">#C4CDD4</color>
+
+  <color name="grayLight">#f7f7f7</color>
+  <color name="txtGray">#A6A6A6</color>
+
+  <array name="arc_colors_default">
+    <item>@color/blueLight</item>z
+    <item>@color/blueLight</item>
+    <item>@color/blueLight</item>
+  </array>
+
+  <color name="lrc_normal_text_color">#9E9E9E</color>
+  <color name="lrc_current_text_color">#FF4081</color>
+  <color name="lrc_timeline_text_color">#F8BBD0</color>
+  <color name="lrc_timeline_color">#809E9E9E</color>
+  <color name="lrc_time_text_color">#809E9E9E</color>
+</resources>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+    android:id="@+id/createChannelL"
+    >
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/content">
+
+    <com.android.widget.ZdEditText
+      android:id="@+id/channelNameEdit"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/userIcon"
+      android:layout_marginTop="40dp"
+      android:background="@drawable/view_border_bottom"
+      android:focusable="true"
+      android:hint="输入你的频道名称(12个字以内)"
+      android:textColorHint="@color/fontLight"
+      android:textColor="@color/font"
+      android:imeOptions="actionNext"
+      android:maxLength="35"
+      android:paddingBottom="5dp"
+      android:singleLine="true"
+      android:textSize="@dimen/big" />
+
+    <com.android.widget.ZdEditText
+      android:id="@+id/channelIntroEdit"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/userIcon"
+      android:layout_marginTop="40dp"
+      android:background="@drawable/view_border_bottom"
+      android:focusable="true"
+      android:gravity="top"
+      android:textColor="@color/font"
+      android:textColorHint="@color/fontLight"
+      android:hint="输入你的频道简介(200个字以内,选填)"
+      android:imeOptions="actionNext"
+      android:minLines="10"
+      android:paddingBottom="5dp"
+      android:textSize="@dimen/normal" />
+
+    <TextView
+      android:id="@+id/channelType"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="right"
+      android:layout_margin="@dimen/content"
+      android:drawableRight="@mipmap/arrow"
+      android:text="频道类型"
+      android:textSize="@dimen/normal"
+      android:textColor="@color/font"
+      android:visibility="gone"
+      android:textStyle="bold" />
+
+    <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_margin="@dimen/content"
+      android:text="封面"
+      android:textColor="@color/fontLight"
+      android:textSize="@dimen/normal" />
+
+    <FrameLayout
+      android:id="@+id/channelCoverR"
+      android:layout_width="match_parent"
+      android:layout_height="200dp"
+      android:background="@drawable/dotted_line"
+      android:padding="1dp">
+
+      <TextView
+        android:id="@+id/channelCoverAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="+"
+        android:textColor="@color/font"
+        android:textSize="50dp" />
+
+      <com.android.widget.ZdImageView
+        android:id="@+id/channelCoverImg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:scaleType="centerCrop" />
+
+      <LinearLayout
+        android:id="@+id/channelCoverL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <com.android.widget.ZdImageView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:src="@mipmap/click_add" />
+
+        <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="10dp"
+          android:gravity="center"
+          android:text="Click to Replace"
+          android:textColor="@color/font"
+          android:textSize="16sp" />
+      </LinearLayout>
+    </FrameLayout>
+  </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

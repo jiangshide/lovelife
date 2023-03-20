@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?><!--<shape xmlns:android="http://schemas.android.com/apk/res/android">-->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+  <item android:drawable="@drawable/view_border_bottom_blue" android:state_checked="true" />
+  <item android:drawable="@drawable/view_border_bottom_blue" android:state_focused="true" />
+  <item android:drawable="@drawable/view_border_bottom_blue" android:state_selected="true" />
+  <item android:drawable="@drawable/view_border_bottom_disable" android:state_checked="false" />
+</selector>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:padding="@dimen/content">
+
+  <FrameLayout
+    android:id="@+id/contactItemIconF"
+    android:layout_width="@dimen/head"
+    android:layout_height="@dimen/head"
+    android:layout_marginRight="@dimen/content">
+
+    <com.android.widget.ZdButton
+      android:id="@+id/contactItemIconBtn"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:text="蒋"
+      android:textColor="@color/white"
+      android:textSize="@dimen/bigSuper"
+      android:textStyle="bold"
+      app:corner="180dp"
+      app:normal_color="@color/blue" />
+
+    <com.android.widget.ZdImageView
+      android:id="@+id/contactItemIcon"
+      android:layout_width="@dimen/head"
+      android:layout_height="@dimen/head"
+      android:scaleType="centerCrop"
+      android:src="@mipmap/default_user"
+      />
+  </FrameLayout>
+
+  <TextView
+    android:id="@+id/contactItemName"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_toRightOf="@+id/contactItemIconF"
+    android:text="name"
+    android:textColor="@color/font"
+    android:textSize="@dimen/big"
+    android:textStyle="bold" />
+
+  <TextView
+    android:id="@+id/contactItemDes"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/contactItemName"
+    android:layout_marginTop="5dp"
+    android:layout_toRightOf="@+id/contactItemIconF"
+    android:text="des"
+    android:textColor="@color/fontLight"
+    android:textSize="@dimen/normal"
+    android:textStyle="bold" />
+  <TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:drawableRight="@mipmap/arrow"
+    android:drawablePadding="@dimen/content"
+    android:text="推荐给好友"
+    android:layout_alignParentRight="true"
+    android:layout_centerVertical="true"
+    android:textStyle="bold"
+    android:textColor="@color/blue"
+    />
+  <com.android.widget.ZdImageView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    />
+</RelativeLayout>

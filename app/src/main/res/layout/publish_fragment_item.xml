@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:id="@+id/publishItemF"
+  android:layout_width="111dp"
+  android:layout_height="111dp"
+  android:padding="@dimen/line"
+  android:background="@color/grayLight"
+  >
+  <ImageView
+    android:id="@+id/publishItemIcon"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scaleType="centerCrop"
+    android:src="@mipmap/image_placeholder" />
+  <ImageButton
+    android:id="@+id/publishItemAdd"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:src="@mipmap/unpublish"
+    android:background="@color/blackLightMiddle"
+    android:visibility="visible"
+    />
+</FrameLayout>

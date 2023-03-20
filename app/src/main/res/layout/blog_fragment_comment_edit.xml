@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:background="@drawable/bg_radius_white"
+  android:gravity="center_vertical"
+  android:orientation="horizontal"
+  android:padding="10dp">
+
+  <com.android.widget.ZdEditText
+    android:id="@+id/commentEdit"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_weight="1"
+    android:background="@color/alpha"
+    android:gravity="center_vertical"
+    android:hint="@string/comment_hint"
+    android:maxHeight="100dp"
+    android:textColor="@color/font"
+    android:textColorHint="@color/fontLight"
+    android:textSize="@dimen/big"
+    android:visibility="visible" />
+
+  <ImageView
+    android:id="@+id/commentEditSend"
+    android:layout_width="@dimen/headSmall"
+    android:layout_height="@dimen/headSmall"
+    android:layout_marginRight="10dp"
+    android:padding="5dp"
+    android:scaleType="centerCrop"
+    android:src="@drawable/send"
+    android:textSize="20sp" />
+</LinearLayout>

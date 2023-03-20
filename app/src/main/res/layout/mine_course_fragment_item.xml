@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:padding="@dimen/content"
+  android:gravity="center_vertical"
+  >
+  <com.android.widget.ZdButton
+    android:id="@+id/courseItemDate"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="2020-09-10 10:32:33"
+    android:textSize="@dimen/normal"
+    android:textColor="@color/white"
+    android:textStyle="bold"
+    android:paddingLeft="@dimen/content"
+    android:paddingRight="@dimen/content"
+    android:paddingTop="3dp"
+    android:paddingBottom="3dp"
+    app:leftCorner="0dp"
+    app:topCorner="10dp"
+    app:rightCorner="10dp"
+    app:bottomCorner="0dp"
+    app:normal_color="@color/blue"
+    />
+
+  <TextView
+    android:id="@+id/courseItemName"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_weight="1"
+    android:text="name"
+    android:gravity="right"
+    android:textSize="@dimen/big"
+    android:layout_marginLeft="@dimen/content"
+    android:textColor="@color/fontLight"
+    android:textStyle="bold"
+    />
+</LinearLayout>

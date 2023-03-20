@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:clipChildren="false"
+    android:id="@+id/docL"
+    android:clipToPadding="false"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_margin="@dimen/content"
+            android:background="@drawable/dotted_line">
+
+            <ImageView
+                android:id="@+id/publishDocCoverImg"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:background="@color/blackLightMiddle"
+                android:scaleType="centerCrop" />
+
+            <com.android.widget.ZdEditText
+                android:id="@+id/publishDocEdit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/view_border_bottom"
+                android:gravity="top"
+                android:hint="发表您的心声吧..."
+                android:minLines="20"
+                android:padding="@dimen/content"
+                android:textColor="@color/font"
+                android:textColorHint="@color/fontLight"
+                android:textSize="@dimen/normal" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/publishDocScroll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/content"
+                android:drawableLeft="@drawable/select"
+                android:text="自动滚动"
+                android:textColor="@color/font"
+                android:drawablePadding="5dp"
+                android:textSize="@dimen/normal"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/publishDocPositionOrSize"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/content"
+                android:text="显示位置及内容尺寸"
+                android:textColor="@color/font"
+                android:textSize="@dimen/normal"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/publishDocColorAdd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/content"
+                android:text="颜色"
+                android:textColor="@color/font"
+                android:textSize="@dimen/normal"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/publishDocCoverAdd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/content"
+                android:text="封面"
+                android:textColor="@color/font"
+                android:textSize="@dimen/normal"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <com.android.widget.ZdEditText
+            android:id="@+id/publishDocName"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/publishAudioViewCard"
+            android:layout_marginLeft="@dimen/content"
+            android:layout_marginRight="@dimen/content"
+            android:background="@drawable/view_border_bottom"
+            android:cursorVisible="false"
+            android:hint="@string/publish_input_doc_name"
+            android:imeOptions="actionSearch"
+            android:maxLength="20"
+            android:padding="@dimen/content"
+            android:singleLine="true"
+            android:textColor="@color/font"
+            android:textColorHint="@color/fontLight"
+            android:textSize="@dimen/big"
+            android:textStyle="bold" />
+
+        <com.android.widget.ZdEditText
+            android:id="@+id/publishDocDes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/publishAudioName"
+            android:layout_marginLeft="@dimen/content"
+            android:layout_marginTop="@dimen/content"
+            android:layout_marginRight="@dimen/content"
+            android:background="@drawable/view_border_bottom"
+            android:gravity="top"
+            android:hint="@string/publish_input_doc_desc"
+            android:minLines="2"
+            android:padding="@dimen/content"
+            android:textColor="@color/font"
+            android:textColorHint="@color/fontLight"
+            android:textSize="@dimen/normal" />
+
+        <include
+            layout="@layout/publish_common"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/publishAudioDes" />
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

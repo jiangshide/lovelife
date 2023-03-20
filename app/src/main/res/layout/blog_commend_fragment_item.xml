@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:orientation="vertical">
+
+  <RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp">
+
+    <com.android.widget.ZdImageView
+      android:id="@+id/commentItemIcon"
+      android:layout_width="40dp"
+      android:layout_height="40dp"
+      android:layout_marginRight="6dp"
+      android:src="@mipmap/default_user" />
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal">
+
+    </LinearLayout>
+
+    <TextView
+      android:id="@+id/commentItemName"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_toRightOf="@+id/commentItemIcon"
+      android:ellipsize="end"
+      android:maxLines="1"
+      android:text="sdss"
+      android:textColor="@color/fontLight"
+      android:textSize="@dimen/normal"
+      android:textStyle="bold" />
+
+    <com.android.widget.ZdTextView
+      android:id="@+id/commentItemContent"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/commentItemName"
+      android:layout_toLeftOf="@+id/blogItemFootLike"
+      android:layout_toRightOf="@+id/commentItemIcon"
+      android:textSize="@dimen/normal"
+      app:close="折叠"
+      app:more="展开"
+      app:text_color="@color/font"
+      />
+
+    <TextView
+      android:id="@+id/commentItemDate"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/commentItemContent"
+      android:layout_toRightOf="@+id/commentItemIcon"
+      android:text="date"
+      android:textColor="@color/gray"
+      android:textSize="@dimen/normal" />
+
+    <TextView
+      android:id="@+id/blogItemFootLike"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignParentTop="true"
+      android:layout_alignParentRight="true"
+      android:layout_centerVertical="true"
+      android:drawableTop="@drawable/like_write"
+      android:drawablePadding="5dp"
+      android:gravity="center"
+      android:textSize="@dimen/small"
+      android:textStyle="bold"
+      android:visibility="visible"
+      android:textColor="@color/fontLight"
+      />
+
+    <com.android.widget.ZdRecycleView
+      android:id="@+id/commentItemRecycleView"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/commentItemDate"
+      android:layout_marginLeft="@dimen/headSmall"
+      android:layout_marginTop="@dimen/content" />
+  </RelativeLayout>
+
+  <FrameLayout
+    android:id="@+id/itemLoadMoreL"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:layout_gravity="center_horizontal"
+    android:visibility="gone"
+    android:orientation="horizontal">
+
+    <com.android.widget.ZdButton
+      android:id="@+id/itemLoadMore"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_gravity="center"
+      android:drawableRight="@mipmap/ic_drop_down"
+      android:padding="@dimen/content"
+      android:text="----->展开更多回复"
+      android:textColor="@color/fontLight"
+      android:textSize="@dimen/normal"
+      app:normal_color="@color/blackLightMiddle" />
+    <com.android.resource.view.LoadingView
+      android:id="@+id/itemLoading"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="center"
+      android:background="@android:color/transparent"
+      app:color1="@color/blueLight" />
+  </FrameLayout>
+</LinearLayout>

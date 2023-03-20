@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:id="@+id/messageChatL"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="@color/blackLightMiddle"
+  android:orientation="vertical">
+
+  <com.android.widget.ZdRecycleView
+    android:id="@+id/commentRecycleView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_above="@+id/commentGoEdit"
+    android:background="@color/bg"
+    android:padding="@dimen/content" />
+
+  <com.android.widget.ZdTextView
+    android:id="@+id/commentGoEdit"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:text="喜欢就评论告诉TA"
+    android:padding="@dimen/content"
+    android:textColor="@color/font"
+    android:textColorHint="@color/fontLight"
+    android:layout_alignParentBottom="true"
+    android:layout_toLeftOf="@+id/commentUser"
+    android:textSize="@dimen/big" />
+
+  <com.android.widget.ZdImageView
+    android:id="@+id/commentUser"
+    android:layout_width="40dp"
+    android:layout_height="40dp"
+    android:padding="@dimen/content"
+    android:layout_alignParentBottom="true"
+    android:layout_toLeftOf="@+id/commentFeel"
+    android:scaleType="centerCrop"
+    android:src="@mipmap/unat" />
+
+  <com.android.widget.ZdImageView
+    android:id="@+id/commentFeel"
+    android:layout_width="40dp"
+    android:layout_height="40dp"
+    android:padding="@dimen/content"
+    android:layout_alignParentBottom="true"
+    android:layout_alignParentRight="true"
+    android:scaleType="centerCrop"
+    android:src="@mipmap/emoj"
+    android:textSize="20sp" />
+</RelativeLayout>

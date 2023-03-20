@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:paddingLeft="@dimen/content"
+  android:paddingRight="@dimen/content"
+  android:paddingTop="5dp"
+  android:paddingBottom="5dp"
+  >
+  <TextView
+    android:id="@+id/typeItemName"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:drawableLeft="@mipmap/weixin_pay"
+    android:text="微信"
+    android:gravity="center"
+    android:textColor="@color/font"
+    android:textSize="@dimen/normal"
+    android:textStyle="bold"
+    android:drawablePadding="@dimen/content"
+    android:layout_centerVertical="true"
+    />
+  <RadioButton
+    android:id="@+id/typeItemCheck"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentRight="true"
+    android:layout_centerVertical="true"
+    android:checked="false"
+    android:enabled="false"
+    android:buttonTint="@color/blue"
+    />
+</RelativeLayout>

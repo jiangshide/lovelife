@@ -1,0 +1,9 @@
+一.模块:web
+功能:解决文件在线与离线浏览以及与网页展示
+使用方式:
+  1.文件本地文件浏览:
+    Web().setUrl("/storage/emulated/0/tencent/MicroMsg/Download/pdf.pdf").open(this)
+  2.文件在线浏览:
+    Web().setUrl("http://192.168.1.104:8089/static/files/android.pdf",true).open(this)
+  3.网页浏览:
+    Web().setUrl("https://www.baidu.com/").open(this)

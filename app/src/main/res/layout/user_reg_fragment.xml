@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent">
+
+  <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+      android:id="@+id/userIconL"
+      android:layout_width="90dp"
+      android:layout_height="90dp"
+      android:layout_gravity="center_horizontal"
+      android:layout_marginLeft="@dimen/content"
+      android:layout_marginTop="40dp"
+      android:layout_marginRight="@dimen/content">
+
+      <com.android.widget.ZdImageView
+        android:id="@+id/userIcon"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        app:srcCompat="@mipmap/default_user" />
+
+      <com.android.widget.ZdImageView
+        android:id="@+id/userIconTips"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        app:srcCompat="@mipmap/ic_setting_camera" />
+    </RelativeLayout>
+
+    <TextView
+      android:id="@+id/userName"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/userIconL"
+      android:layout_marginLeft="@dimen/content"
+      android:layout_marginTop="10dp"
+      android:textColor="@color/font"
+      android:layout_marginRight="@dimen/content"
+      android:textSize="16sp" />
+
+    <TextView
+      android:id="@+id/userSentTips"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/userName"
+      android:layout_marginLeft="@dimen/content"
+      android:layout_marginRight="@dimen/content"
+      android:text="Verification code has been sent"
+      android:textColor="@color/disable"
+      android:textSize="16sp" />
+
+    <LinearLayout
+      android:id="@+id/userSexL"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/userSentTips"
+      android:layout_marginLeft="10dp"
+      android:layout_marginTop="@dimen/content"
+      android:orientation="horizontal">
+
+      <RadioGroup
+        android:id="@+id/userSexGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+          android:id="@+id/userSexGroupMan"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:textColor="@color/font"
+          android:theme="@style/check_box"
+          android:text="男" />
+
+        <RadioButton
+          android:id="@+id/userSexGroupWoman"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:textColor="@color/font"
+          android:theme="@style/check_box"
+          android:text="女" />
+      </RadioGroup>
+    </LinearLayout>
+
+    <FrameLayout
+      android:id="@+id/userValidateCodeL"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/userSexL"
+      android:layout_marginLeft="@dimen/content"
+      android:layout_marginTop="20dp"
+      android:layout_marginRight="@dimen/content"
+      android:visibility="visible">
+
+      <com.android.widget.ZdEditText
+        android:id="@+id/userValidateCode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/view_border_bottom"
+        android:hint="Verification code"
+        android:imeOptions="actionNext"
+        android:inputType="text"
+        android:textCursorDrawable="@null"
+        android:maxLength="6"
+        android:paddingBottom="5dp"
+        android:singleLine="true"
+        android:textColor="@color/font"
+        android:textColorHint="@color/fontLight"
+        android:textSize="16sp"
+        app:isDelete="false" />
+
+      <com.android.widget.ZdTextView
+        android:id="@+id/userValidateCodeSend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right|center_vertical"
+        android:text="@string/resend"
+          android:textColor="@color/blueLight"
+        android:textSize="16sp" />
+    </FrameLayout>
+
+    <com.android.widget.ZdEditText
+      android:id="@+id/userPswEdit"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/userValidateCodeL"
+      android:layout_marginLeft="@dimen/content"
+      android:layout_marginTop="20dp"
+      android:layout_marginRight="@dimen/content"
+      android:background="@drawable/view_border_bottom"
+      android:hint="Password"
+      android:textCursorDrawable="@null"
+      android:imeOptions="actionNext"
+      android:inputType="textPassword"
+      android:maxLength="20"
+      android:paddingBottom="5dp"
+      android:singleLine="true"
+      android:textColor="@color/font"
+      android:textColorHint="@color/fontLight"
+      android:textSize="16sp" />
+
+    <com.android.widget.ZdEditText
+      android:id="@+id/userConfirmEdit"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/userPswEdit"
+      android:layout_marginLeft="@dimen/content"
+      android:layout_marginTop="20dp"
+      android:layout_marginRight="@dimen/content"
+      android:background="@drawable/view_border_bottom"
+      android:hint="Confirm"
+      android:imeOptions="actionNext"
+      android:textCursorDrawable="@null"
+      android:inputType="textPassword"
+      android:maxLength="20"
+      android:paddingBottom="5dp"
+      android:singleLine="true"
+      android:textColor="@color/font"
+      android:textColorHint="@color/fontLight"
+      android:textSize="16sp" />
+
+    <TextView
+      android:id="@+id/userConfirmTipsSize"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/userConfirmEdit"
+      android:layout_marginLeft="@dimen/content"
+      android:layout_marginTop="32dp"
+      android:layout_marginRight="@dimen/content"
+      android:drawableLeft="@mipmap/icon_tips"
+      android:drawablePadding="13dp"
+      android:drawableTint="@color/disable"
+      android:text="More than 8 characters"
+      android:textColor="@color/fontLight"
+      android:visibility="visible" />
+
+    <TextView
+      android:id="@+id/userConfirmTipsType"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/userConfirmTipsSize"
+      android:layout_marginLeft="@dimen/content"
+      android:layout_marginTop="@dimen/content"
+      android:layout_marginRight="@dimen/content"
+      android:drawableLeft="@mipmap/icon_tips"
+      android:drawablePadding="13dp"
+      android:textColor="@color/fontLight"
+      android:drawableTint="@color/disable"
+      android:text="Including Uppercase,Lowercase and Numbers"
+      android:visibility="visible" />
+
+    <CheckBox
+      android:id="@+id/userProtocol"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/userConfirmTipsType"
+      android:layout_marginLeft="@dimen/content"
+      android:layout_marginTop="40dp"
+      android:checked="true"
+      android:theme="@style/check_box"
+      android:text="《用户协议》"
+
+      android:textColor="@color/font" />
+
+    <com.android.widget.ZdButton
+      android:id="@+id/userSubmitAudit"
+      android:layout_width="match_parent"
+      android:layout_height="@dimen/buttonHeight"
+      android:layout_below="@+id/userProtocol"
+      android:layout_marginLeft="@dimen/content"
+      android:layout_marginRight="@dimen/content"
+      android:layout_marginBottom="@dimen/content"
+      android:enabled="false"
+      android:padding="10dp"
+      android:text="确认"
+      android:textColor="@color/font"
+      android:textSize="16sp"
+      android:textStyle="bold"
+      app:corner="@dimen/button"
+      app:normal_color="@color/disable" />
+  </RelativeLayout>
+
+</androidx.core.widget.NestedScrollView>

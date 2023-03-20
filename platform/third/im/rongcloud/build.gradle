@@ -1,0 +1,73 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+android {
+
+  signingConfigs {
+    sign {
+      storeFile file("$rootDir/$STORE_FILE")
+      storePassword STORE_PSW
+      keyAlias = KEY_ALIAS
+      keyPassword KEY_PSW
+
+      v1SigningEnabled = true
+      v2SigningEnabled = true
+    }
+  }
+
+  compileSdkVersion COMPILE_SDK_VERSION.toInteger()
+  buildToolsVersion SUPPORT_SDK_VERSION
+
+  defaultConfig {
+    minSdkVersion MIN_SDK_VERSION.toInteger()
+    targetSdkVersion TARGET_SDK_VERSION.toInteger()
+    versionCode 1
+    versionName "1.0"
+
+    testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    consumerProguardFiles 'consumer-rules.pro'
+  }
+
+  buildTypes {
+    debug {
+      minifyEnabled false
+      signingConfig signingConfigs.sign
+    }
+
+    release {
+      minifyEnabled MINIFY_ENABLED.toBoolean()
+      proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+      signingConfig signingConfigs.sign
+    }
+  }
+
+  compileOptions {
+    sourceCompatibility = JAVA_VERSION
+    targetCompatibility = JAVA_VERSION
+  }
+}
+
+dependencies {
+  implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+  implementation 'androidx.appcompat:appcompat:1.0.2'
+  testImplementation 'junit:junit:4.12'
+  androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+  androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
+  api "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
+
+//  implementation project(':base')
+  implementation project(':utils')
+
+  implementation project(path: ':event')
+
+  api 'cn.rongcloud.sdk:im_kit:2.10.2'
+  //im_kit必须依赖im_lib，所以需要加入对应依赖
+  api 'cn.rongcloud.sdk:im_lib:2.10.2'
+
+//  api 'com.huawei.android.hms:base:2.6.1.301'
+//  api 'com.huawei.android.hms:push:2.6.1.301'
+
+//  implementation 'com.google.firebase:firebase-analytics:17.2.2'//FCM
+
+}

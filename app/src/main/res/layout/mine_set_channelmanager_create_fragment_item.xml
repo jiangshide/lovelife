@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.android.resource.view.SwipeMenuLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="1dp"
+    app:ios="false"
+    android:id="@+id/swipeMenuLayout"
+    app:leftSwipe="true"
+    app:swipeEnable="true">
+
+    <RelativeLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/content">
+
+        <com.android.widget.ZdImageView
+            android:id="@+id/createChannelItemIcon"
+            android:layout_width="@dimen/head"
+            android:layout_height="@dimen/head"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/content"
+            android:scaleType="fitXY"
+            android:src="@mipmap/default_user" />
+
+        <TextView
+            android:id="@+id/createChannelItemName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/createChannelItemIcon"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="janeky"
+            android:textColor="@color/font"
+            android:textSize="@dimen/big"
+            android:textStyle="bold" />
+
+        <com.android.widget.ZdButton
+            android:id="@+id/createChannelItemType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="5dp"
+            android:layout_toRightOf="@+id/createChannelItemName"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:paddingLeft="10dp"
+            android:paddingTop="2dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="2dp"
+            android:text="共有"
+            android:textColor="@color/white"
+            android:textSize="@dimen/small"
+            android:textStyle="bold"
+            android:visibility="gone"
+            app:corner="2dp"
+            app:normal_color="@color/yellowLight" />
+
+        <TextView
+            android:id="@+id/createChannelItemDes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/createChannelItemName"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="@dimen/content"
+            android:layout_toLeftOf="@+id/createChannelItemStatus"
+            android:layout_toRightOf="@+id/createChannelItemIcon"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:text="ssss"
+            android:textColor="@color/fontLight"
+            android:textSize="@dimen/small" />
+
+        <TextView
+            android:id="@+id/createChannelItemDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/createChannelItemName"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="10dp"
+            android:drawablePadding="@dimen/content"
+            android:text="2020.02.10"
+            android:textColor="@color/fontLight"
+            android:textSize="@dimen/small" />
+
+        <TextView
+            android:id="@+id/createChannelItemStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/createChannelItemDes"
+            android:layout_alignParentRight="true"
+            android:drawablePadding="@dimen/content"
+            android:text="审核中"
+            android:textColor="@color/font"
+            android:textSize="@dimen/normal" />
+    </RelativeLayout>
+    <com.android.widget.ZdButton
+        android:id="@+id/channelRefresh"
+        android:layout_width="60dp"
+        android:layout_height="match_parent"
+        android:background="@color/blackLightMiddle"
+        android:text="刷新"
+        android:textColor="@color/font"
+        android:textStyle="bold"
+        app:normal_color="@color/blackLightMiddle"
+        app:press_color="@color/gray"
+        app:stroke="0dp"
+        app:stroke_color="@color/fontLight"
+        app:corner="0dp"
+        />
+    <com.android.widget.ZdButton
+        android:id="@+id/channelStatus"
+        android:layout_width="60dp"
+        android:layout_height="match_parent"
+        android:background="@color/blueLight"
+        android:text="公开"
+        android:textColor="@color/font"
+        android:textStyle="bold"
+        app:normal_color="@color/blueLight"
+        app:press_color="@color/gray"
+        app:stroke="0dp"
+        app:stroke_color="@color/fontLight"
+        app:corner="0dp"
+        />
+    <com.android.widget.ZdButton
+        android:id="@+id/channelTop"
+        android:layout_width="60dp"
+        android:layout_height="match_parent"
+        android:background="@color/yellowLight"
+        android:text="置顶"
+        android:textColor="@color/font"
+        android:textStyle="bold"
+        app:normal_color="@color/yellowLight"
+        app:press_color="@color/gray"
+        app:stroke="0dp"
+        app:stroke_color="@color/fontLight"
+        app:corner="0dp"
+        />
+
+    <com.android.widget.ZdButton
+        android:id="@+id/channelDel"
+        android:layout_width="60dp"
+        android:layout_height="match_parent"
+        android:background="@color/red"
+        android:text="删除"
+        android:textStyle="bold"
+        android:textColor="@color/font"
+        app:normal_color="@color/red"
+        app:press_color="@color/gray"
+        app:stroke="0dp"
+        app:stroke_color="@color/fontLight"
+        app:corner="0dp"
+        />
+</com.android.resource.view.SwipeMenuLayout>

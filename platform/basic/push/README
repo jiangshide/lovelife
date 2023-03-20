@@ -1,0 +1,11 @@
+一.模块:push
+功能:对接第三方push接口与业务内链统一输出接口
+使用方式:
+  1.接收push:
+    ZdEvent.get().with(Push.PUSH,PushData::class.java).observes(this, Observer {
+        //handle...
+    })
+
+
+
+

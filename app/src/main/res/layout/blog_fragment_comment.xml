@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:id="@+id/commentRootL"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:layout_gravity="bottom"
+  android:focusable="true"
+  android:focusableInTouchMode="true"
+  android:background="@drawable/bg_radius_white"
+  android:orientation="vertical">
+
+
+  <TextView
+    android:id="@+id/commentTips"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerHorizontal="true"
+    android:gravity="center"
+    android:padding="@dimen/content"
+    android:text="2.4w 条评论"
+    android:textColor="@color/fontLight"
+    android:textSize="@dimen/big"
+    android:textStyle="bold" />
+
+  <ImageView
+    android:id="@+id/commentClose"
+    android:layout_width="35dp"
+    android:layout_height="35dp"
+    android:layout_alignParentRight="true"
+    android:padding="@dimen/content"
+    android:scaleType="fitXY"
+    android:tint="@color/fontLight"
+    app:srcCompat="@mipmap/close" />
+
+  <androidx.core.widget.NestedScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_above="@+id/commentGoEdit"
+    android:layout_below="@+id/commentTips"
+    android:padding="@dimen/content">
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:focusable="true"
+      android:focusableInTouchMode="true"
+      android:orientation="vertical">
+
+      <com.android.widget.ZdRecycleView
+        android:id="@+id/commentRecycleView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+      <FrameLayout
+        android:id="@+id/loadMoreL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/commentRecycleView"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <com.android.widget.ZdButton
+          android:id="@+id/loadMore"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center"
+          android:drawableRight="@mipmap/ic_drop_down"
+          android:padding="@dimen/content"
+          android:text="----->展开更多回复"
+          android:textColor="@color/fontLight"
+          android:textSize="@dimen/normal"
+          app:normal_color="@color/blackLightMiddle" />
+
+        <com.android.resource.view.LoadingView
+          android:id="@+id/loading"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center"
+          android:background="@android:color/transparent"
+          app:color1="#FEA800" />
+      </FrameLayout>
+    </LinearLayout>
+  </androidx.core.widget.NestedScrollView>
+
+  <com.android.widget.ZdTipsView
+    android:id="@+id/commentErrTips"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="true"
+    android:visibility="gone" />
+
+  <TextView
+    android:id="@+id/commentGoEdit"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:layout_toLeftOf="@+id/commentUser"
+    android:gravity="center_vertical"
+    android:padding="@dimen/content"
+    android:text="喜欢就评论告诉TA"
+    android:textColor="@color/whiteLight"
+    android:textSize="@dimen/big" />
+
+  <ImageView
+    android:id="@+id/commentUser"
+    android:layout_width="40dp"
+    android:layout_height="40dp"
+    android:layout_alignParentBottom="true"
+    android:layout_toLeftOf="@+id/commentFeel"
+    android:padding="@dimen/content"
+    android:scaleType="centerCrop"
+    android:visibility="gone"
+    android:src="@mipmap/unat" />
+
+  <ImageView
+    android:id="@+id/commentFeel"
+    android:layout_width="40dp"
+    android:layout_height="40dp"
+    android:layout_alignParentRight="true"
+    android:layout_alignParentBottom="true"
+    android:padding="@dimen/content"
+    android:scaleType="centerCrop"
+    android:visibility="gone"
+    android:src="@mipmap/emoj"
+    android:textSize="20sp" />
+</RelativeLayout>

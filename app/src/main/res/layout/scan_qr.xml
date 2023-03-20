@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <SurfaceView
+        android:id="@+id/surfaceView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.king.zxing.ViewfinderView
+        android:id="@+id/viewfinderView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <ImageView
+        android:id="@+id/ivTorch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/torchMarginTop"
+        android:src="@drawable/zxl_torch_selector" />
+    <ImageView
+        android:id="@+id/scanAlbumImg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/album"
+        android:layout_gravity="bottom|right"
+        android:layout_margin="@dimen/head"
+        />
+    <LinearLayout
+        android:id="@+id/topBarL"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/topBar">
+
+        <com.android.widget.ZdButton
+            android:id="@+id/topLeftBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:minWidth="35dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/content"
+            android:drawableLeft="@mipmap/back"
+            android:gravity="center"
+            android:textSize="@dimen/normal"
+            android:textStyle="bold"
+            app:normal_color="@color/alpha"
+            app:press_color="@color/alpha" />
+    </LinearLayout>
+</FrameLayout>

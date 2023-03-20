@@ -1,0 +1,151 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'com.aliyun.ams.emas-services'
+apply plugin: 'bugly'
+
+android {
+
+    signingConfigs {
+        sign {
+            storeFile file("$rootDir/$STORE_FILE")
+            storePassword STORE_PSW
+            keyAlias = KEY_ALIAS
+            keyPassword KEY_PSW
+
+            v1SigningEnabled = true
+            v2SigningEnabled = true
+        }
+        debug {
+            storeFile file("$rootDir/$STORE_FILE")
+            storePassword STORE_PSW
+            keyAlias = KEY_ALIAS
+            keyPassword KEY_PSW
+            v1SigningEnabled = true
+            v2SigningEnabled = true
+        }
+    }
+
+    compileSdkVersion COMPILE_SDK_VERSION.toInteger()
+    buildToolsVersion SUPPORT_SDK_VERSION
+
+    defaultConfig {
+        applicationId APPLICATION_ID
+        minSdkVersion MIN_SDK_VERSION.toInteger()
+        targetSdkVersion TARGET_SDK_VERSION.toInteger()
+        versionCode APP_VERSION_CODE.toInteger()
+        versionName APP_VERSION_NAME
+
+        multiDexEnabled true
+        signingConfig signingConfigs.sign
+
+        ndk {
+//                  abiFilters 'armeabi', 'armeabi-v7a', 'x86'
+            abiFilters 'armeabi-v7a'
+        }
+
+        manifestPlaceholders = [
+                //        GETUI_APP_ID    : PUSH_APPID,
+                //        GETUI_APP_KEY   : PUSH_APPKEY,
+                //        GETUI_APP_SECRET: PUSH_APPSECRET,
+                //        GI_APPID : GI_APPID,
+                //        GS_APPID : GS_APPID,
+                //        GT_INSTALL_CHANNEL : "getui",
+                JPUSH_PKGNAME      : APPLICATION_ID,
+                JPUSH_APPKEY       : PUSH_APPKEY,
+                JPUSH_CHANNEL      : "developer-default",
+                HUAWEI_APP_ID      : HW_APP_ID,
+                MEIZU_APP_ID       : MEIZU_APP_ID,
+                MEIZU_APP_KEY      : MEIZU_APP_KEY,
+                XIAOMI_APP_ID      : XIAOMI_APP_ID,
+                XIAOMI_APP_KEY     : XIAOMI_APP_KEY,
+                OPPO_APP_KEY       : OPPO_APP_KEY,
+                OPPO_APP_SECRET    : OPPO_APP_SECRET,
+                VIVO_APP_ID        : VIVO_APP_ID,
+                VIVO_APP_KEY       : VIVO_APP_KEY,
+                "app_name"         : "中青看点",
+                "app_launcher_icon": "@drawable/ic_launcher"
+        ]
+
+        buildConfigField('String', 'USE_AGREEMENT', "\"${USE_AGREEMENT}\"")
+        buildConfigField('String', 'PRIVACY_AGREEMENT', "\"${PRIVACY_AGREEMENT}\"")
+        buildConfigField('String', 'FUNCTION_INTRODUCE', "\"${FUNCTION_INTRODUCE}\"")
+        buildConfigField('String', 'CHANNEL', "\"${CHANNEL}\"")
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+//      minifyEnabled true
+            // 开启混淆
+            minifyEnabled true
+            // Zipalign压缩优化
+            zipAlignEnabled true
+            // 移除无用的资源文件
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility = JAVA_VERSION
+        targetCompatibility = JAVA_VERSION
+    }
+
+    def sourceFile
+    applicationVariants.all { variant ->
+        variant.outputs.all { output ->
+            def fileName
+            if ("" == DATE) {
+                DATE = System.currentTimeSeconds()
+            }
+            if (variant.buildType.name == 'debug') {
+                fileName = "sanskrit-android-v${APP_VERSION_NAME}-${APP_VERSION_CODE}-debug.apk"
+            } else {
+                fileName = "sanskrit-${LABLE}-android-${CHANNEL}-v${APP_VERSION_NAME}-${APP_VERSION_CODE}-${DATE}-${ENVIRONMENT}-${variant.buildType.name}.apk"
+            }
+            outputFileName = fileName
+            if ("true".equals(project.IS_REMOTE)) {
+                if ("".equals(OUTPUT_FILE)) {
+                    OUTPUT_FILE = fileName
+                }
+                sourceFile = outputFile.parentFile.absolutePath + java.io.File.separator + outputFileName
+            }
+        }
+    }
+
+    build{
+        doLast(){
+            removeFile(sourceFile,OUTPUT_FILE)
+        }
+    }
+}
+
+repositories {
+    flatDir {
+        dirs '../libs'
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation 'androidx.core:core-ktx:1.3.0'
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+    implementation project(':resource')
+
+    implementation project(':videoprocessor')
+    implementation project(':filter')
+    implementation project(':ad')
+
+    implementation 'com.king.zxing:zxing-lite:1.1.9-androidx'
+
+    implementation 'com.tencent.bugly:crashreport:latest.release'
+    implementation 'com.tencent.bugly:nativecrashreport:latest.release'
+
+}

@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:orientation="vertical"
+    android:id="@+id/lrcSearchL"
+  >
+  <FrameLayout
+    android:id="@+id/songNameF"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="@dimen/content">
+
+    <com.android.widget.ZdEditText
+      android:id="@+id/songNameEdit"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:drawablePadding="@dimen/content"
+      android:hint="..."
+      android:padding="10dp"
+      android:maxLines="1"
+      android:ellipsize="end"
+      android:layout_marginLeft="45dp"
+      android:textColor="@color/font"
+      android:textColorHint="@color/fontLight"
+      android:textSize="@dimen/normal"
+      app:corners="5dp"
+      app:isDelete="true"
+      app:normal_colors="@color/blackLight" />
+
+    <com.android.widget.ZdButton
+      android:id="@+id/songNameBtn"
+      android:layout_width="wrap_content"
+      android:layout_height="match_parent"
+      android:textColor="@color/font"
+      android:text="歌名"
+      android:textSize="@dimen/big"
+      app:leftCorner="5dp"
+      app:topCorner="0dp"
+      app:rightCorner="0dp"
+      app:bottomCorner="5dp"
+      android:paddingRight="@dimen/content"
+      android:paddingLeft="@dimen/content"
+      app:normal_color="@color/blackLightMiddle"
+      app:press_color="@color/blackLight" />
+  </FrameLayout>
+  <FrameLayout
+    android:id="@+id/songAuthorF"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="@dimen/content">
+
+    <com.android.widget.ZdEditText
+      android:id="@+id/songAuthorEdit"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:drawablePadding="@dimen/content"
+      android:hint="..."
+      android:padding="10dp"
+      android:maxLines="1"
+      android:ellipsize="end"
+      android:layout_marginLeft="45dp"
+      android:textColor="@color/font"
+      android:textColorHint="@color/fontLight"
+      android:textSize="@dimen/normal"
+      app:corners="5dp"
+      app:isDelete="true"
+      app:normal_colors="@color/blackLight" />
+
+    <com.android.widget.ZdButton
+      android:id="@+id/songAuthorBtn"
+      android:layout_width="wrap_content"
+      android:layout_height="match_parent"
+      android:textColor="@color/font"
+      android:text="歌手"
+      android:textSize="@dimen/big"
+      app:leftCorner="5dp"
+      app:topCorner="0dp"
+      app:rightCorner="0dp"
+      app:bottomCorner="5dp"
+      android:paddingRight="@dimen/content"
+      android:paddingLeft="@dimen/content"
+      app:normal_color="@color/blackLightMiddle"
+      app:press_color="@color/blackLight" />
+  </FrameLayout>
+  <RelativeLayout
+    android:id="@+id/songTypeR"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/content"
+    android:layout_marginRight="@dimen/content"
+    android:layout_marginTop="@dimen/content"
+    android:orientation="horizontal">
+
+    <RadioGroup
+      android:id="@+id/songTypeGroup"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal">
+
+      <RadioButton
+        android:id="@+id/songTypeGroupZh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/font"
+        android:theme="@style/check_box"
+        android:checked="true"
+        android:text="中文" />
+
+      <RadioButton
+        android:id="@+id/songTypeGrouEs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/content"
+        android:textColor="@color/font"
+        android:theme="@style/check_box"
+        android:text="英文" />
+    </RadioGroup>
+    <com.android.widget.ZdButton
+      android:id="@+id/songSearchBtn"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:padding="@dimen/content"
+      android:layout_alignParentRight="true"
+      android:textColor="@color/fontLight"
+      android:text="搜索"
+      android:textSize="@dimen/big"
+      app:leftCorner="5dp"
+      app:topCorner="5dp"
+      android:textStyle="bold"
+      app:rightCorner="5dp"
+      app:bottomCorner="5dp"
+      android:paddingRight="@dimen/content"
+      android:paddingLeft="@dimen/content"
+      app:normal_color="@color/blackLightMiddle"
+      app:press_color="@color/blackLight" />
+  </RelativeLayout>
+  <TextView
+    android:id="@+id/songSearchResult"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:text="还未搜索！"
+    android:textSize="@dimen/normal"
+    android:textColor="@color/font"
+    android:layout_margin="@dimen/content"
+    />
+  <com.android.widget.ZdViewPager
+    android:id="@+id/lrcViewPager"
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1"
+    android:background="@null"
+    />
+  <com.android.tablayout.ZdTabLayout
+    android:id="@+id/tabsLrc"
+    android:layout_width="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:layout_height="35dp"
+    android:layout_centerHorizontal="true"
+    android:layout_marginBottom="@dimen/content"
+    android:layout_marginLeft="@dimen/content"
+    android:layout_marginRight="@dimen/content"
+    android:background="@null" />
+</LinearLayout>

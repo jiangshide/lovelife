@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:orientation="vertical">
+
+  <com.android.widget.ZdEditText
+    android:id="@+id/codeSearchEdit"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:drawableLeft="@mipmap/search"
+    android:layout_margin="@dimen/content"
+    android:padding="@dimen/content"
+    android:drawablePadding="@dimen/content"
+    android:maxLines="1"
+    android:imeOptions="actionSearch"
+    android:textCursorDrawable="@null"
+    android:textSize="@dimen/normal"
+    android:textColorHint="@color/fontLight"
+    android:hint="关键字..."
+    app:corners="90dp"
+    app:isDelete="true"
+    />
+
+  <RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.recyclerview.widget.RecyclerView
+      android:id="@+id/rv_pick"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent" />
+
+    <com.android.resource.code.SideBar
+      android:id="@+id/side"
+      android:layout_width="20dp"
+      android:layout_height="match_parent"
+      android:layout_alignParentRight="true"
+      app:letterColor="@color/blackLightMiddle"
+      app:letterSize="12sp"
+      app:selectColor="@color/blueLight" />
+
+    <com.android.widget.ZdTextView
+      android:id="@+id/tv_letter"
+      android:layout_width="60dp"
+      android:layout_height="60dp"
+      android:layout_centerInParent="true"
+      android:background="#80000000"
+      android:gravity="center"
+      android:textSize="24sp"
+      android:visibility="gone" />
+  </RelativeLayout>
+
+</LinearLayout>

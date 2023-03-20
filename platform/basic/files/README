@@ -1,0 +1,29 @@
+一.模块:files
+功能:解决本地文件格式浏览以及选择与裁剪
+使用方式:
+  1.头像获取(单文件):
+    Files().setType(Files.IMG)
+              .setThemeMode(false)
+              .setTitleColor(R.color.white)
+              .setTopColor(R.color.black)
+              .setRightTxt("完成")
+              .setCrop(true)
+              .setTabSelectedColor(R.color.white)
+              .setRightColor(R.color.redLight)
+              .setSingleListener {
+                profileIconPath = it.path
+                Img.loadImageCircle(profileIconPath, userRegHead, R.mipmap.user_icon)
+              }
+              .open(mActivity)
+  2.多文件:
+    Files().setSufix(".pdf",".png",".mp4")
+              .setThemeMode(false)
+              .setTitleColor(R.color.white)
+              .setTopColor(R.color.black)
+              .setRightTxt("完成")
+              .setTabSelectedColor(R.color.white)
+              .setRightColor(R.color.redLight)
+              .setMultipleListener {
+                  //多文件处理
+              }
+              .open(mActivity)

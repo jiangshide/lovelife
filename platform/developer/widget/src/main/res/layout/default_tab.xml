@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.android.widget.ZdTabHost xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@android:id/tabhost"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@null"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@null"
+        android:orientation="vertical">
+
+        <include layout="@layout/default_top_bar"/>
+
+        <RelativeLayout
+            android:id="@+id/tabMain"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/bg" />
+
+            <FrameLayout
+                android:id="@+id/frameLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/bg"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/floatL"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_margin="@dimen/content"
+                android:orientation="vertical"
+                android:paddingBottom="30dp"
+                android:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/floatPlay"
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:visibility="gone" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <com.android.widget.menu.SectorMenuButton
+                        android:id="@+id/floatMenus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        app:aebAnimDurationMillis="175"
+                        app:aebBlurBackground="false"
+                        app:aebBlurRadius="10"
+                        app:aebButtonElevation="0dp"
+                        app:aebButtonGapDp="10dp"
+                        app:aebEndAngleDegree="90"
+                        app:aebIsSelectionMode="false"
+                        app:aebMainButtonRotateAnimDurationMillis="300"
+                        app:aebMainButtonRotateDegree="0"
+                        app:aebMainButtonSizeDp="40dp"
+                        app:aebRippleColor="@color/alpha"
+                        app:aebRippleEffect="false"
+                        app:aebStartAngleDegree="90"
+                        app:aebSubButtonSizeDp="30dp" />
+
+                    <ImageView
+                        android:id="@+id/floatIcon"
+                        android:layout_width="@dimen/head"
+                        android:layout_height="@dimen/head"
+                        android:layout_centerInParent="true"
+                        android:scaleType="fitXY" />
+
+                    <com.android.widget.ZdButton
+                        android:id="@+id/floatBtn"
+                        android:layout_width="@dimen/head"
+                        android:layout_height="@dimen/head"
+                        android:layout_centerInParent="true"
+                        android:enabled="false"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/normal"
+                        android:textStyle="bold"
+                        app:corner="180dp"
+                        app:normal_color="@color/alpha"
+                        app:stroke="3dp"
+                        app:stroke_color="@color/blue" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/defaultTabBarL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:orientation="vertical">
+
+                <ProgressBar
+                    android:id="@+id/defaultProgress"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_below="@+id/uploadIcon"
+                    android:max="100"
+                    android:progressDrawable="@drawable/seek_progress"
+                    android:visibility="gone" />
+
+                <TabWidget
+                    android:id="@android:id/tabs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/alpha" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/defaultNavigationBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+    </LinearLayout>
+</com.android.widget.ZdTabHost>

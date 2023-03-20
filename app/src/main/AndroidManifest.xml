@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.android.sanskrit">
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_CALENDAR" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.SYSTEM_OVERLAY_WINDOW" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <!-- for mta statistics -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:resizeable="true"
+        android:smallScreens="true"
+        android:xlargeScreens="true" />
+
+    <application
+        android:name=".App"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:screenOrientation="portrait"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        android:requestLegacyExternalStorage="true"
+        tools:replace="theme,label,icon,allowBackup"
+        >
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/rc_file_path"/>
+        </provider>
+
+        <activity
+            android:name=".Splash"
+            android:theme="@style/LauncherTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.king.zxing.CaptureActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/CaptureTheme"/>
+
+      <!--允许绘制到oppo、vivo刘海屏机型的刘海区域 -->
+      <meta-data
+          android:name="android.max_aspect"
+          android:value="2.8" />
+      <!-- 允许绘制到华为刘海屏机型的刘海区域 -->
+      <meta-data
+          android:name="android.notch_support"
+          android:value="true" />
+      <!-- 允许绘制到小米刘海屏机型的刘海区域 -->
+      <meta-data
+          android:name="notch.config"
+          android:value="landscape" />
+
+      <!--    <activity-->
+      <!--      android:name=".SplashActivity"-->
+      <!--      android:theme="@style/LauncherTheme">-->
+      <!--      <intent-filter>-->
+      <!--        <action android:name="android.intent.action.MAIN" />-->
+
+      <!--        <category android:name="android.intent.category.LAUNCHER" />-->
+      <!--      </intent-filter>-->
+      <!--    </activity>-->
+      <activity
+          android:name="com.android.sanskrit.MainActivity"
+          android:screenOrientation="portrait"
+          android:launchMode="singleTask"
+          android:configChanges="keyboardHidden|orientation|screenSize|screenLayout"
+          android:windowSoftInputMode="adjustResize|adjustUnspecified|stateHidden">
+      </activity>
+
+      <activity android:name=".DistrictActivity" />
+      <activity
+          android:name=".wxapi.WXEntryActivity"
+          android:exported="true"
+          android:launchMode="singleTask"
+          android:screenOrientation="portrait"
+          android:taskAffinity="com.android.sanskrit"
+          android:theme="@style/AppThemeFullscreen">
+        <intent-filter>
+          <action android:name="android.intent.action.VIEW" />
+          <category android:name="android.intent.category.DEFAULT" />
+          <data android:scheme="wx1bd7f51f4f97f248" />
+        </intent-filter>
+      </activity>
+      <activity
+          android:name=".wxapi.WXPayEntryActivity"
+          android:exported="true"
+          android:launchMode="singleTop" />
+
+      <service
+          android:name="com.android.resource.audio.AudioService"
+          android:enabled="true"
+          android:exported="false">
+        <intent-filter>
+          <action android:name="com.android.sanskrit.AUDIO_ACTION_CMD" />
+        </intent-filter>
+      </service>
+      <service android:name="com.android.resource.PublishService" />
+    </application>
+
+</manifest>

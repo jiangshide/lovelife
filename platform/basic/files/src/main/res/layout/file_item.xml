@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.android.files.view.SquareRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:id="@+id/fileItemPhotoL"
+  android:orientation="vertical">
+
+  <com.android.widget.ZdImageView
+    android:id="@+id/fileItemIcon"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@mipmap/image_placeholder"
+    android:padding="1dp"
+    android:scaleType="centerCrop" />
+
+  <View
+    android:id="@+id/fileItemBg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent_black"
+    android:visibility="gone" />
+
+  <ImageView
+    android:id="@+id/fileItemPlay"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:layout_margin="5dp"
+    android:src="@mipmap/video" />
+
+  <com.android.files.view.SmoothCheckBox
+    android:id="@+id/fileItemCheck"
+    style="@style/SmoothCheckBoxStyle"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentTop="true"
+    android:layout_alignParentEnd="true"
+    android:layout_alignParentRight="true"
+    android:visibility="gone"
+    android:layout_margin="5dp" />
+  <TextView
+    android:id="@+id/fileItemDate"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="time"
+    android:textColor="@color/white"
+    android:layout_alignParentLeft="true"
+    android:textSize="6sp"
+    android:layout_margin="5dp"
+    />
+  <TextView
+    android:id="@+id/fileItemTime"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:layout_alignParentRight="true"
+    android:textColor="@color/white"
+    android:textSize="6sp"
+    android:layout_margin="5dp"
+    />
+</com.android.files.view.SquareRelativeLayout>

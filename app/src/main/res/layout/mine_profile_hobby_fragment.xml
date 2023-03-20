@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:padding="@dimen/content"
+  android:orientation="vertical"
+  >
+
+  <TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="可选择以下任意6项："
+    android:textSize="@dimen/normal"
+    android:textColor="@color/fontLight"
+    android:layout_marginTop="@dimen/head"
+    />
+
+  <com.android.widget.TagView
+    android:id="@+id/userProfileHobbyTag"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/content"
+    />
+  <RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/userIcon"
+    android:paddingBottom="5dp"
+    >
+    <com.android.widget.ZdEditText
+      android:id="@+id/userProfileHobbyEdit"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_centerVertical="true"
+      android:paddingLeft="60dp"
+      android:hint="你的爱好!"
+      android:inputType="textEmailAddress"
+      android:maxLines="1"
+      android:maxLength="6"
+      android:textColor="@color/font"
+      android:textColorHint="@color/fontLight"
+      android:textSize="16sp" />
+    <com.android.widget.ZdButton
+      android:id="@+id/userProfileHobbyAdd"
+      android:layout_width="wrap_content"
+      android:layout_height="26dp"
+      android:layout_marginLeft="3dp"
+      android:paddingRight="5dp"
+      android:textColor="@color/white"
+      android:layout_centerVertical="true"
+      android:paddingLeft="5dp"
+      android:text="添加"
+      app:normal_color="@color/blue"
+      app:corner="0dp"
+      />
+  </RelativeLayout>
+  <TextView
+    android:id="@+id/userProfileHobbyTips"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="可自由添加后进行选择,限6项!"
+    android:textSize="@dimen/normal"
+    android:textColor="@color/fontLight"
+    android:layout_gravity="right"
+    />
+</LinearLayout>

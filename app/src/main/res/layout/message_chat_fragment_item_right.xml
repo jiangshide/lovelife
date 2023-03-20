@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:visibility="visible"
+  android:id="@+id/chatRightR"
+  android:layout_below="@+id/chatDate"
+  android:padding="@dimen/content"
+  >
+
+  <TextView
+    android:id="@+id/chatRightName"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_toLeftOf="@+id/chatRightIcon"
+      android:paddingBottom="5dp"
+    android:textSize="@dimen/small"
+    android:textColor="@color/fontLight"
+
+    />
+  <com.android.widget.ZdButton
+    android:id="@+id/chatRightDes"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_toLeftOf="@+id/chatRightIcon"
+    android:layout_below="@+id/chatRightName"
+    android:padding="@dimen/content"
+    android:focusable="false"
+    android:textColor="@color/font"
+    android:textSize="@dimen/normal"
+    app:bottomCorner="18dp"
+    app:leftCorner="18dp"
+    app:normal_color="@color/blackLightMiddle"
+    app:rightCorner="18dp"
+    app:topCorner="0dp" />
+
+  <com.android.widget.ZdImageView
+    android:id="@+id/chatRightIcon"
+    android:layout_width="@dimen/head"
+    android:layout_height="@dimen/head"
+    android:layout_alignParentRight="true"
+    android:layout_marginLeft="@dimen/content"
+    android:src="@mipmap/default_user" />
+</RelativeLayout>

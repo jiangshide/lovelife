@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.android.widget.ZdViewPager
+        android:id="@+id/homeViewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@null" />
+
+    <LinearLayout
+        android:id="@+id/honeTopL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <com.android.tablayout.ZdTabLayout
+            android:id="@+id/tabsHome"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/topBar"
+            android:layout_gravity="center_horizontal"
+            android:background="@null" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginEnd="@dimen/content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <com.android.widget.ZdButton
+                android:id="@+id/textBannerBg"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:textColor="@color/font"
+                app:corner="180dp"
+                app:normal_color="@color/blackLightMiddle"
+                app:position="right"
+                app:press_color="@color/blackLight" />
+          <ImageView
+              android:id="@+id/textBannerScan"
+              android:layout_width="20dp"
+              android:layout_height="20dp"
+              android:layout_alignParentStart="true"
+              android:layout_centerVertical="true"
+              android:layout_marginStart="@dimen/content"
+              android:scaleType="centerCrop"
+              android:src="@mipmap/scan" />
+            <com.android.resource.view.textbanner.TextBanner
+                android:id="@+id/textBanner"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/content"
+                android:layout_marginRight="@dimen/content"
+                android:layout_toRightOf="@+id/textBannerScan"
+                android:layout_toLeftOf="@+id/textBannerSearch"
+                app:delayTimes="5000"
+                app:durations="800" />
+
+            <com.android.resource.view.LoadingView
+                android:id="@+id/homeLoading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@android:color/transparent"
+                android:visibility="gone"
+                app:color1="@color/blueLight" />
+
+            <ImageView
+                android:id="@+id/textBannerSearch"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/content"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/search" />
+        </RelativeLayout>
+    </LinearLayout>
+</FrameLayout>

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:layout_width="wrap_content"
+  android:layout_height="wrap_content"
+  android:orientation="vertical">
+
+  <androidx.cardview.widget.CardView
+    android:id="@+id/channelTypeItemCardView"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:layout_margin="@dimen/content"
+    app:cardBackgroundColor="@color/blackLightMiddle"
+    app:cardCornerRadius="5dp"
+    app:cardElevation="5dp"
+    app:cardMaxElevation="5dp">
+
+    <RelativeLayout
+      android:layout_width="250dp"
+      android:layout_height="wrap_content"
+      android:orientation="vertical">
+
+      <FrameLayout
+        android:id="@+id/officialCoverL"
+        android:layout_width="250dp"
+        android:layout_height="120dp">
+
+        <com.android.widget.ZdImageView
+          android:id="@+id/officialCover"
+          android:layout_width="250dp"
+          android:layout_height="120dp"
+          android:scaleType="centerCrop" />
+
+        <LinearLayout
+          android:id="@+id/officialItemUserL"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_gravity="bottom"
+          android:orientation="vertical"
+          android:padding="5dp">
+
+          <com.android.widget.ZdImageView
+            android:id="@+id/officialItemIcon"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/default_user" />
+
+          <TextView
+            android:id="@+id/officialItemName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:drawableLeft="@mipmap/sex_women"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text=".北京市"
+            android:textColor="@color/font"
+            android:textSize="@dimen/small"
+            android:textStyle="bold" />
+        </LinearLayout>
+      </FrameLayout>
+
+      <TextView
+        android:id="@+id/officialFollow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_margin="5dp"
+        android:textColor="@color/font"
+        android:textSize="@dimen/big"
+        android:textStyle="bold" />
+
+      <com.android.widget.ZdImageView
+        android:id="@+id/officialItemFormat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_margin="5dp"
+        android:scaleType="fitXY"
+        android:src="@mipmap/img"
+        android:tint="@color/white" />
+
+      <TextView
+        android:id="@+id/officialName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/officialCoverL"
+        android:padding="5dp"
+        android:layout_marginTop="3dp"
+        android:textColor="@color/font"
+        android:textSize="@dimen/normal"
+        android:textStyle="bold" />
+
+      <TextView
+        android:id="@+id/officialCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/officialCoverL"
+        android:layout_alignBaseline="@+id/officialName"
+        android:layout_toRightOf="@+id/officialName"
+        android:gravity="center"
+        android:textColor="@color/fontLight"
+        android:textSize="@dimen/small"
+        android:textStyle="bold" />
+
+      <TextView
+        android:id="@+id/officialLike"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/officialCoverL"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:drawableRight="@drawable/like_write"
+        android:drawablePadding="5dp"
+        android:gravity="center"
+        android:padding="5dp"
+        android:textColor="@color/font"
+        android:textStyle="bold" />
+    </RelativeLayout>
+  </androidx.cardview.widget.CardView>
+</LinearLayout>

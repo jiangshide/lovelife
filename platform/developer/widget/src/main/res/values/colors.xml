@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+  <!--constant start-->
+  <color name="yellow">#FFFF00</color>
+  <color name="yellowLight">#ffd200</color>
+  <color name="black">#1F1E23</color>
+  <color name="blackLight">#353535</color>
+  <color name="blackLightMiddle">#33353f</color>
+  <color name="white">#FFFFFF</color>
+  <color name="whiteLight">#FFFFF0</color>
+  <color name="fans">#FF83FA</color>
+  <color name="green">#66CDAA</color>
+  <color name="red">#FF0000</color>
+  <color name="redLight">#bb2323</color>
+  <color name="blue">#1296db</color>
+  <color name="blueLight">#00BFFF</color>
+  <color name="gray">#808080</color>
+  <color name="translucent">#80000000</color>
+  <color name="translucent3">#30000000</color>
+  <color name="alpha">#00000000</color>
+  <color name="line">#D4D4D4</color>
+  <!--constant end-->
+
+  <drawable name="white">@color/white</drawable>
+  <drawable name="whiteLight">#fffff9</drawable>
+  <drawable name="gray">@color/gray</drawable>
+  <drawable name="line">@color/line</drawable>
+  <drawable name="alpha">#00000000</drawable>
+
+  <!--app start-->
+  <color name="bg">@color/black</color>
+  <color name="font">@color/white</color>
+  <color name="fontLight">@color/line</color>
+  <color name="progressBar">@color/alpha</color>
+  <color name="progress">@color/blue</color>
+  <color name="secondProgress">@color/blueLight</color>
+  <!--app end-->
+
+  <color name="emojicon_tab_selected">#D9D9D9</color>
+  <color name="emojicon_tab_nomal">#ffffff</color>
+</resources>

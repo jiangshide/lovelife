@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:orientation="vertical">
+
+  <include layout="@layout/blog_fragment_list_head" />
+
+  <FrameLayout
+    android:id="@+id/blogAudioItemCard"
+    android:layout_width="match_parent"
+    android:layout_height="120dp"
+    >
+    <ImageView
+      android:id="@+id/blogAudioItemCover"
+      android:layout_width="match_parent"
+      android:layout_height="120dp"
+      android:scaleType="centerCrop"
+      android:src="@drawable/audio"
+      />
+    <com.android.resource.view.MusicPlayerView
+      android:id="@+id/blogAudioItemRecord"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:background="@null"
+      android:visibility="visible" />
+
+    <FrameLayout
+      android:id="@+id/blogAudioItemF"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:background="@null"
+      android:visibility="gone">
+
+      <com.android.player.audio.AudioView
+        android:id="@+id/blogAudioItemView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/alpha"
+        android:visibility="gone" />
+
+      <ImageView
+        android:id="@+id/blogAudioItemPlay"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/play" />
+    </FrameLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+      >
+      <ImageView
+          android:id="@+id/blogAudioItemSource"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:src="@mipmap/sync"
+          android:layout_margin="5dp"
+          android:visibility="gone"
+          />
+      <TextView
+          android:id="@+id/blogAudioItemTime"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_margin="5dp"
+          android:text="12:12"
+          android:textColor="@color/font"
+          android:textSize="@dimen/normal" />
+    </LinearLayout>
+
+    <ImageView
+      android:id="@+id/blogAudioItemType"
+      android:layout_gravity="right|top"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:src="@mipmap/audio"
+      android:layout_margin="5dp"
+      />
+    <TextView
+      android:id="@+id/blogAudioItemTitle"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="right|bottom"
+      android:layout_margin="5dp"
+      android:textColor="@color/fontLight"
+      android:textSize="@dimen/normal" />
+    <ProgressBar
+      android:id="@+id/blogAudioItemProgress"
+      style="?android:attr/progressBarStyleHorizontal"
+      android:layout_width="match_parent"
+      android:layout_height="2dp"
+      android:layout_gravity="bottom"
+      android:progress="30"
+      android:progressDrawable="@drawable/seek_progress" />
+  </FrameLayout>
+
+  <include layout="@layout/blog_fragment_list_foot" />
+
+  <include layout="@layout/blog_fragment_list_comment" />
+</LinearLayout>

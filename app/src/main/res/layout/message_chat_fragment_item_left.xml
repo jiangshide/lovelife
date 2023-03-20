@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:layout_height="wrap_content"
+  android:id="@+id/chatLeftR"
+  android:visibility="visible"
+  android:padding="@dimen/content"
+  android:layout_below="@+id/chatDate"
+  >
+  <com.android.widget.ZdImageView
+    android:id="@+id/chatLeftIcon"
+    android:layout_width="@dimen/head"
+    android:layout_height="@dimen/head"
+    android:layout_marginRight="@dimen/content"
+    android:src="@mipmap/default_user" />
+  <com.android.widget.ZdTextView
+    android:id="@+id/chatLeftName"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+      android:paddingBottom="5dp"
+    android:layout_toRightOf="@+id/chatLeftIcon"
+    android:textSize="@dimen/small"
+    android:textColor="@color/fontLight"
+    />
+  <com.android.widget.ZdButton
+    android:id="@+id/chatLeftDes"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_toRightOf="@+id/chatLeftIcon"
+    android:layout_below="@+id/chatLeftName"
+    android:focusable="false"
+    android:textColor="@color/white"
+    android:textSize="@dimen/normal"
+    android:padding="@dimen/content"
+    app:normal_color="@color/blue"
+    app:leftCorner="0dp"
+    app:topCorner="18dp"
+    app:rightCorner="18dp"
+    app:bottomCorner="18dp"
+    />
+</RelativeLayout>
